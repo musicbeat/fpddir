@@ -1,4 +1,4 @@
-package main
+package stddata
 
 import (
 	"bufio"
@@ -31,7 +31,7 @@ var fs = [...]int {91, 92}
 var be = [...]int {92, 93}
 var dt = [...]int {93, 101}
 
-func main() {
+func LoadFpddir() {
 	res, err := http.Get("http://www.fededirectory.frb.org/fpddir.txt")
 	if err != nil {
 		log.Fatal(err)
