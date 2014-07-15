@@ -24,6 +24,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"sort"
 )
 
 type Language struct {
@@ -86,12 +87,18 @@ func LoadIso639() {
 		EnglishNameMap[l.EnglishName] = l
 
 	}
-	for key, value := range AlphaMap {
-		    fmt.Println("Key:", key, "Value:", value)
+	for key, value := range LanguageMaps {
+		fmt.Println("Map: ", key)
+		var keys []string
+		for k := range value {
+			keys = append(keys, k)
+		}
+		sort.Strings(keys)
+		for _, k := range(keys) {
+			fmt.Println("Key: ", k, "Value: ", value[k])
+		}
 	}
-	for key, value := range EnglishNameMap {
-		    fmt.Println("Key:", key, "Value:", value)
-	}
+	fmt.Println("Json:")
 	j, err := json.MarshalIndent(languages, "", "  ")
 	if err == nil {
 		fmt.Printf("%s\n", j)
