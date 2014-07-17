@@ -39,16 +39,16 @@ type Languages struct {
 }
 
 var LanguageMaps map[string] map[string]Language
-var AlphaMap map[string]Language
-var EnglishNameMap map[string]Language
 
 func LoadIso639() {
+	var alphaMap map[string]Language
+	var englishNameMap map[string]Language
 	// initialize the maps:
-	AlphaMap = make(map[string]Language)
-	EnglishNameMap = make(map[string]Language)
+	alphaMap = make(map[string]Language)
+	englishNameMap = make(map[string]Language)
 	LanguageMaps = make(map[string] map[string]Language)
-	LanguageMaps["Alpha"] = AlphaMap
-	LanguageMaps["English"] = EnglishNameMap
+	LanguageMaps["Alpha"] = alphaMap
+	LanguageMaps["English"] = englishNameMap
 	
 	res, err := http.Get("http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt")
 	if err != nil {
@@ -83,8 +83,8 @@ func LoadIso639() {
 
 		languages.Languages = append(languages.Languages, l)
 
-		AlphaMap[l.Alpha3bibliographic] = l
-		EnglishNameMap[l.EnglishName] = l
+		alphaMap[l.Alpha3bibliographic] = l
+		englishNameMap[l.EnglishName] = l
 
 	}
 	for key, value := range LanguageMaps {
