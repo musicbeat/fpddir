@@ -4,5 +4,5 @@ The [stddata](https://github.com/musicbeat/stddata) is a trivial component in wh
 
 ## Getting Started
  * [clone the repo](https://github.com/musicbeat/stddata)
- * Hold your breath -- there's nothing more -- yet.
+ * Hold your breath -- there's nothing to see here -- yet.
 
