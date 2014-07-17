@@ -1,0 +1,748 @@
+| [[Afghanistan]]
+| [[ISO 3166-1 alpha-2#AF|<tt>AF</tt>]] || <tt>AFG</tt> || <tt>004</tt> || 
+|-
+| {{sort|Aland Islands|[[Åland Islands]]}}
+| [[ISO 3166-1 alpha-2#AX|<tt>AX</tt>]] || <tt>ALA</tt> || <tt>248</tt> || 
+|-
+| [[Albania]]
+| [[ISO 3166-1 alpha-2#AL|<tt>AL</tt>]] || <tt>ALB</tt> || <tt>008</tt> || 
+|-
+| [[Algeria]]
+| [[ISO 3166-1 alpha-2#DZ|<tt>DZ</tt>]] || <tt>DZA</tt> || <tt>012</tt> || 
+|-
+| [[American Samoa]]
+| [[ISO 3166-1 alpha-2#AS|<tt>AS</tt>]] || <tt>ASM</tt> || <tt>016</tt> || 
+|-
+| [[Andorra]]
+| [[ISO 3166-1 alpha-2#AD|<tt>AD</tt>]] || <tt>AND</tt> || <tt>020</tt> || 
+|-
+| [[Angola]]
+| [[ISO 3166-1 alpha-2#AO|<tt>AO</tt>]] || <tt>AGO</tt> || <tt>024</tt> || 
+|-
+| [[Anguilla]]
+| [[ISO 3166-1 alpha-2#AI|<tt>AI</tt>]] || <tt>AIA</tt> || <tt>660</tt> || 
+|-
+| [[Antarctica]]
+| [[ISO 3166-1 alpha-2#AQ|<tt>AQ</tt>]] || <tt>ATA</tt> || <tt>010</tt> || 
+|-
+| [[Antigua and Barbuda]]
+| [[ISO 3166-1 alpha-2#AG|<tt>AG</tt>]] || <tt>ATG</tt> || <tt>028</tt> || 
+|-
+| [[Argentina]]
+| [[ISO 3166-1 alpha-2#AR|<tt>AR</tt>]] || <tt>ARG</tt> || <tt>032</tt> || 
+|-
+| [[Armenia]]
+| [[ISO 3166-1 alpha-2#AM|<tt>AM</tt>]] || <tt>ARM</tt> || <tt>051</tt> || 
+|-
+| [[Aruba]]
+| [[ISO 3166-1 alpha-2#AW|<tt>AW</tt>]] || <tt>ABW</tt> || <tt>533</tt> || 
+|-
+| [[Australia]]
+| [[ISO 3166-1 alpha-2#AU|<tt>AU</tt>]] || <tt>AUS</tt> || <tt>036</tt> || 
+|-
+| [[Austria]]
+| [[ISO 3166-1 alpha-2#AT|<tt>AT</tt>]] || <tt>AUT</tt> || <tt>040</tt> || 
+|-
+| [[Azerbaijan]]
+| [[ISO 3166-1 alpha-2#AZ|<tt>AZ</tt>]] || <tt>AZE</tt> || <tt>031</tt> || 
+|-
+| [[Bahamas]]
+| [[ISO 3166-1 alpha-2#BS|<tt>BS</tt>]] || <tt>BHS</tt> || <tt>044</tt> || 
+|-
+| [[Bahrain]]
+| [[ISO 3166-1 alpha-2#BH|<tt>BH</tt>]] || <tt>BHR</tt> || <tt>048</tt> || 
+|-
+| [[Bangladesh]]
+| [[ISO 3166-1 alpha-2#BD|<tt>BD</tt>]] || <tt>BGD</tt> || <tt>050</tt> || 
+|-
+| [[Barbados]]
+| [[ISO 3166-1 alpha-2#BB|<tt>BB</tt>]] || <tt>BRB</tt> || <tt>052</tt> || 
+|-
+| [[Belarus]]
+| [[ISO 3166-1 alpha-2#BY|<tt>BY</tt>]] || <tt>BLR</tt> || <tt>112</tt> || 
+|-
+| [[Belgium]]
+| [[ISO 3166-1 alpha-2#BE|<tt>BE</tt>]] || <tt>BEL</tt> || <tt>056</tt> || 
+|-
+| [[Belize]]
+| [[ISO 3166-1 alpha-2#BZ|<tt>BZ</tt>]] || <tt>BLZ</tt> || <tt>084</tt> || 
+|-
+| [[Benin]]
+| [[ISO 3166-1 alpha-2#BJ|<tt>BJ</tt>]] || <tt>BEN</tt> || <tt>204</tt> || 
+|-
+| [[Bermuda]]
+| [[ISO 3166-1 alpha-2#BM|<tt>BM</tt>]] || <tt>BMU</tt> || <tt>060</tt> || 
+|-
+| [[Bhutan]]
+| [[ISO 3166-1 alpha-2#BT|<tt>BT</tt>]] || <tt>BTN</tt> || <tt>064</tt> || 
+|-
+| [[Bolivia, Plurinational State of]]
+| [[ISO 3166-1 alpha-2#BO|<tt>BO</tt>]] || <tt>BOL</tt> || <tt>068</tt> || 
+|-
+| [[Bonaire, Sint Eustatius and Saba]]
+| [[ISO 3166-1 alpha-2#BQ|<tt>BQ</tt>]] || <tt>BES</tt> || <tt>535</tt> || 
+|-
+| [[Bosnia and Herzegovina]]
+| [[ISO 3166-1 alpha-2#BA|<tt>BA</tt>]] || <tt>BIH</tt> || <tt>070</tt> || 
+|-
+| [[Botswana]]
+| [[ISO 3166-1 alpha-2#BW|<tt>BW</tt>]] || <tt>BWA</tt> || <tt>072</tt> || 
+|-
+| [[Bouvet Island]]
+| [[ISO 3166-1 alpha-2#BV|<tt>BV</tt>]] || <tt>BVT</tt> || <tt>074</tt> || 
+|-
+| [[Brazil]]
+| [[ISO 3166-1 alpha-2#BR|<tt>BR</tt>]] || <tt>BRA</tt> || <tt>076</tt> || 
+|-
+| [[British Indian Ocean Territory]]
+| [[ISO 3166-1 alpha-2#IO|<tt>IO</tt>]] || <tt>IOT</tt> || <tt>086</tt> || 
+|-
+| [[Brunei Darussalam]]
+| [[ISO 3166-1 alpha-2#BN|<tt>BN</tt>]] || <tt>BRN</tt> || <tt>096</tt> || 
+|-
+| [[Bulgaria]]
+| [[ISO 3166-1 alpha-2#BG|<tt>BG</tt>]] || <tt>BGR</tt> || <tt>100</tt> || 
+|-
+| [[Burkina Faso]]
+| [[ISO 3166-1 alpha-2#BF|<tt>BF</tt>]] || <tt>BFA</tt> || <tt>854</tt> || 
+|-
+| [[Burundi]]
+| [[ISO 3166-1 alpha-2#BI|<tt>BI</tt>]] || <tt>BDI</tt> || <tt>108</tt> || 
+|-
+| [[Cambodia]]
+| [[ISO 3166-1 alpha-2#KH|<tt>KH</tt>]] || <tt>KHM</tt> || <tt>116</tt> || 
+|-
+| [[Cameroon]]
+| [[ISO 3166-1 alpha-2#CM|<tt>CM</tt>]] || <tt>CMR</tt> || <tt>120</tt> || 
+|-
+| [[Canada]]
+| [[ISO 3166-1 alpha-2#CA|<tt>CA</tt>]] || <tt>CAN</tt> || <tt>124</tt> || 
+|-
+| [[Cabo Verde]]
+| [[ISO 3166-1 alpha-2#CV|<tt>CV</tt>]] || <tt>CPV</tt> || <tt>132</tt> || 
+|-
+| [[Cayman Islands]]
+| [[ISO 3166-1 alpha-2#KY|<tt>KY</tt>]] || <tt>CYM</tt> || <tt>136</tt> || 
+|-
+| [[Central African Republic]]
+| [[ISO 3166-1 alpha-2#CF|<tt>CF</tt>]] || <tt>CAF</tt> || <tt>140</tt> || 
+|-
+| [[Chad]]
+| [[ISO 3166-1 alpha-2#TD|<tt>TD</tt>]] || <tt>TCD</tt> || <tt>148</tt> || 
+|-
+| [[Chile]]
+| [[ISO 3166-1 alpha-2#CL|<tt>CL</tt>]] || <tt>CHL</tt> || <tt>152</tt> || 
+|-
+| [[China]]
+| [[ISO 3166-1 alpha-2#CN|<tt>CN</tt>]] || <tt>CHN</tt> || <tt>156</tt> || 
+|-
+| [[Christmas Island]]
+| [[ISO 3166-1 alpha-2#CX|<tt>CX</tt>]] || <tt>CXR</tt> || <tt>162</tt> || 
+|-
+| [[Cocos (Keeling) Islands]]
+| [[ISO 3166-1 alpha-2#CC|<tt>CC</tt>]] || <tt>CCK</tt> || <tt>166</tt> || 
+|-
+| [[Colombia]]
+| [[ISO 3166-1 alpha-2#CO|<tt>CO</tt>]] || <tt>COL</tt> || <tt>170</tt> || 
+|-
+| [[Comoros]]
+| [[ISO 3166-1 alpha-2#KM|<tt>KM</tt>]] || <tt>COM</tt> || <tt>174</tt> || 
+|-
+| [[Republic of the Congo|Congo]]
+| [[ISO 3166-1 alpha-2#CG|<tt>CG</tt>]] || <tt>COG</tt> || <tt>178</tt> || 
+|-
+| [[Congo, the Democratic Republic of the]]
+| [[ISO 3166-1 alpha-2#CD|<tt>CD</tt>]] || <tt>COD</tt> || <tt>180</tt> || 
+|-
+| [[Cook Islands]]
+| [[ISO 3166-1 alpha-2#CK|<tt>CK</tt>]] || <tt>COK</tt> || <tt>184</tt> || 
+|-
+| [[Costa Rica]]
+| [[ISO 3166-1 alpha-2#CR|<tt>CR</tt>]] || <tt>CRI</tt> || <tt>188</tt> || 
+|-
+| {{sort|Cote d'Ivoire|[[Côte d'Ivoire]]}}
+| [[ISO 3166-1 alpha-2#CI|<tt>CI</tt>]] || <tt>CIV</tt> || <tt>384</tt> || 
+|-
+| [[Croatia]]
+| [[ISO 3166-1 alpha-2#HR|<tt>HR</tt>]] || <tt>HRV</tt> || <tt>191</tt> || 
+|-
+| [[Cuba]]
+| [[ISO 3166-1 alpha-2#CU|<tt>CU</tt>]] || <tt>CUB</tt> || <tt>192</tt> || 
+|-
+| {{sort|Curacao|[[Curaçao]]}}
+| [[ISO 3166-1 alpha-2#CW|<tt>CW</tt>]] || <tt>CUW</tt> || <tt>531</tt> || 
+|-
+| [[Cyprus]]
+| [[ISO 3166-1 alpha-2#CY|<tt>CY</tt>]] || <tt>CYP</tt> || <tt>196</tt> || 
+|-
+| [[Czech Republic]]
+| [[ISO 3166-1 alpha-2#CZ|<tt>CZ</tt>]] || <tt>CZE</tt> || <tt>203</tt> || 
+|-
+| [[Denmark]]
+| [[ISO 3166-1 alpha-2#DK|<tt>DK</tt>]] || <tt>DNK</tt> || <tt>208</tt> || 
+|-
+| [[Djibouti]]
+| [[ISO 3166-1 alpha-2#DJ|<tt>DJ</tt>]] || <tt>DJI</tt> || <tt>262</tt> || 
+|-
+| [[Dominica]]
+| [[ISO 3166-1 alpha-2#DM|<tt>DM</tt>]] || <tt>DMA</tt> || <tt>212</tt> || 
+|-
+| [[Dominican Republic]]
+| [[ISO 3166-1 alpha-2#DO|<tt>DO</tt>]] || <tt>DOM</tt> || <tt>214</tt> || 
+|-
+| [[Ecuador]]
+| [[ISO 3166-1 alpha-2#EC|<tt>EC</tt>]] || <tt>ECU</tt> || <tt>218</tt> || 
+|-
+| [[Egypt]]
+| [[ISO 3166-1 alpha-2#EG|<tt>EG</tt>]] || <tt>EGY</tt> || <tt>818</tt> || 
+|-
+| [[El Salvador]]
+| [[ISO 3166-1 alpha-2#SV|<tt>SV</tt>]] || <tt>SLV</tt> || <tt>222</tt> || 
+|-
+| [[Equatorial Guinea]]
+| [[ISO 3166-1 alpha-2#GQ|<tt>GQ</tt>]] || <tt>GNQ</tt> || <tt>226</tt> || 
+|-
+| [[Eritrea]]
+| [[ISO 3166-1 alpha-2#ER|<tt>ER</tt>]] || <tt>ERI</tt> || <tt>232</tt> || 
+|-
+| [[Estonia]]
+| [[ISO 3166-1 alpha-2#EE|<tt>EE</tt>]] || <tt>EST</tt> || <tt>233</tt> || 
+|-
+| [[Ethiopia]]
+| [[ISO 3166-1 alpha-2#ET|<tt>ET</tt>]] || <tt>ETH</tt> || <tt>231</tt> || 
+|-
+| [[Falkland Islands (Malvinas)]]
+| [[ISO 3166-1 alpha-2#FK|<tt>FK</tt>]] || <tt>FLK</tt> || <tt>238</tt> || 
+|-
+| [[Faroe Islands]]
+| [[ISO 3166-1 alpha-2#FO|<tt>FO</tt>]] || <tt>FRO</tt> || <tt>234</tt> || 
+|-
+| [[Fiji]]
+| [[ISO 3166-1 alpha-2#FJ|<tt>FJ</tt>]] || <tt>FJI</tt> || <tt>242</tt> || 
+|-
+| [[Finland]]
+| [[ISO 3166-1 alpha-2#FI|<tt>FI</tt>]] || <tt>FIN</tt> || <tt>246</tt> || 
+|-
+| [[France]]
+| [[ISO 3166-1 alpha-2#FR|<tt>FR</tt>]] || <tt>FRA</tt> || <tt>250</tt> || 
+|-
+| [[French Guiana]]
+| [[ISO 3166-1 alpha-2#GF|<tt>GF</tt>]] || <tt>GUF</tt> || <tt>254</tt> || 
+|-
+| [[French Polynesia]]
+| [[ISO 3166-1 alpha-2#PF|<tt>PF</tt>]] || <tt>PYF</tt> || <tt>258</tt> || 
+|-
+| [[French Southern Territories]]
+| [[ISO 3166-1 alpha-2#TF|<tt>TF</tt>]] || <tt>ATF</tt> || <tt>260</tt> || 
+|-
+| [[Gabon]]
+| [[ISO 3166-1 alpha-2#GA|<tt>GA</tt>]] || <tt>GAB</tt> || <tt>266</tt> || 
+|-
+| [[Gambia]]
+| [[ISO 3166-1 alpha-2#GM|<tt>GM</tt>]] || <tt>GMB</tt> || <tt>270</tt> || 
+|-
+| [[Georgia (country)|Georgia]]
+| [[ISO 3166-1 alpha-2#GE|<tt>GE</tt>]] || <tt>GEO</tt> || <tt>268</tt> || 
+|-
+| [[Germany]]
+| [[ISO 3166-1 alpha-2#DE|<tt>DE</tt>]] || <tt>DEU</tt> || <tt>276</tt> || 
+|-
+| [[Ghana]]
+| [[ISO 3166-1 alpha-2#GH|<tt>GH</tt>]] || <tt>GHA</tt> || <tt>288</tt> || 
+|-
+| [[Gibraltar]]
+| [[ISO 3166-1 alpha-2#GI|<tt>GI</tt>]] || <tt>GIB</tt> || <tt>292</tt> || 
+|-
+| [[Greece]]
+| [[ISO 3166-1 alpha-2#GR|<tt>GR</tt>]] || <tt>GRC</tt> || <tt>300</tt> || 
+|-
+| [[Greenland]]
+| [[ISO 3166-1 alpha-2#GL|<tt>GL</tt>]] || <tt>GRL</tt> || <tt>304</tt> || 
+|-
+| [[Grenada]]
+| [[ISO 3166-1 alpha-2#GD|<tt>GD</tt>]] || <tt>GRD</tt> || <tt>308</tt> || 
+|-
+| [[Guadeloupe]]
+| [[ISO 3166-1 alpha-2#GP|<tt>GP</tt>]] || <tt>GLP</tt> || <tt>312</tt> || 
+|-
+| [[Guam]]
+| [[ISO 3166-1 alpha-2#GU|<tt>GU</tt>]] || <tt>GUM</tt> || <tt>316</tt> || 
+|-
+| [[Guatemala]]
+| [[ISO 3166-1 alpha-2#GT|<tt>GT</tt>]] || <tt>GTM</tt> || <tt>320</tt> || 
+|-
+| [[Guernsey]]
+| [[ISO 3166-1 alpha-2#GG|<tt>GG</tt>]] || <tt>GGY</tt> || <tt>831</tt> || 
+|-
+| [[Guinea]]
+| [[ISO 3166-1 alpha-2#GN|<tt>GN</tt>]] || <tt>GIN</tt> || <tt>324</tt> || 
+|-
+| [[Guinea-Bissau]]
+| [[ISO 3166-1 alpha-2#GW|<tt>GW</tt>]] || <tt>GNB</tt> || <tt>624</tt> || 
+|-
+| [[Guyana]]
+| [[ISO 3166-1 alpha-2#GY|<tt>GY</tt>]] || <tt>GUY</tt> || <tt>328</tt> || 
+|-
+| [[Haiti]]
+| [[ISO 3166-1 alpha-2#HT|<tt>HT</tt>]] || <tt>HTI</tt> || <tt>332</tt> || 
+|-
+| [[Heard Island and McDonald Islands]]
+| [[ISO 3166-1 alpha-2#HM|<tt>HM</tt>]] || <tt>HMD</tt> || <tt>334</tt> || 
+|-
+| [[Vatican City State|Holy See (Vatican City State)]]
+| [[ISO 3166-1 alpha-2#VA|<tt>VA</tt>]] || <tt>VAT</tt> || <tt>336</tt> || 
+|-
+| [[Honduras]]
+| [[ISO 3166-1 alpha-2#HN|<tt>HN</tt>]] || <tt>HND</tt> || <tt>340</tt> || 
+|-
+| [[Hong Kong]]
+| [[ISO 3166-1 alpha-2#HK|<tt>HK</tt>]] || <tt>HKG</tt> || <tt>344</tt> || 
+|-
+| [[Hungary]]
+| [[ISO 3166-1 alpha-2#HU|<tt>HU</tt>]] || <tt>HUN</tt> || <tt>348</tt> || 
+|-
+| [[Iceland]]
+| [[ISO 3166-1 alpha-2#IS|<tt>IS</tt>]] || <tt>ISL</tt> || <tt>352</tt> || 
+|-
+| [[India]]
+| [[ISO 3166-1 alpha-2#IN|<tt>IN</tt>]] || <tt>IND</tt> || <tt>356</tt> || 
+|-
+| [[Indonesia]]
+| [[ISO 3166-1 alpha-2#ID|<tt>ID</tt>]] || <tt>IDN</tt> || <tt>360</tt> || 
+|-
+| [[Iran, Islamic Republic of]]
+| [[ISO 3166-1 alpha-2#IR|<tt>IR</tt>]] || <tt>IRN</tt> || <tt>364</tt> || 
+|-
+| [[Iraq]]
+| [[ISO 3166-1 alpha-2#IQ|<tt>IQ</tt>]] || <tt>IRQ</tt> || <tt>368</tt> || 
+|-
+| [[Republic of Ireland|Ireland]]
+| [[ISO 3166-1 alpha-2#IE|<tt>IE</tt>]] || <tt>IRL</tt> || <tt>372</tt> || 
+|-
+| [[Isle of Man]]
+| [[ISO 3166-1 alpha-2#IM|<tt>IM</tt>]] || <tt>IMN</tt> || <tt>833</tt> || 
+|-
+| [[Israel]]
+| [[ISO 3166-1 alpha-2#IL|<tt>IL</tt>]] || <tt>ISR</tt> || <tt>376</tt> || 
+|-
+| [[Italy]]
+| [[ISO 3166-1 alpha-2#IT|<tt>IT</tt>]] || <tt>ITA</tt> || <tt>380</tt> || 
+|-
+| [[Jamaica]]
+| [[ISO 3166-1 alpha-2#JM|<tt>JM</tt>]] || <tt>JAM</tt> || <tt>388</tt> || 
+|-
+| [[Japan]]
+| [[ISO 3166-1 alpha-2#JP|<tt>JP</tt>]] || <tt>JPN</tt> || <tt>392</tt> || 
+|-
+| [[Jersey]]
+| [[ISO 3166-1 alpha-2#JE|<tt>JE</tt>]] || <tt>JEY</tt> || <tt>832</tt> || 
+|-
+| [[Jordan]]
+| [[ISO 3166-1 alpha-2#JO|<tt>JO</tt>]] || <tt>JOR</tt> || <tt>400</tt> || 
+|-
+| [[Kazakhstan]]
+| [[ISO 3166-1 alpha-2#KZ|<tt>KZ</tt>]] || <tt>KAZ</tt> || <tt>398</tt> || 
+|-
+| [[Kenya]]
+| [[ISO 3166-1 alpha-2#KE|<tt>KE</tt>]] || <tt>KEN</tt> || <tt>404</tt> || 
+|-
+| [[Kiribati]]
+| [[ISO 3166-1 alpha-2#KI|<tt>KI</tt>]] || <tt>KIR</tt> || <tt>296</tt> || 
+|-
+| [[Korea, Democratic People's Republic of]]
+| [[ISO 3166-1 alpha-2#KP|<tt>KP</tt>]] || <tt>PRK</tt> || <tt>408</tt> || 
+|-
+| [[Korea, Republic of]]
+| [[ISO 3166-1 alpha-2#KR|<tt>KR</tt>]] || <tt>KOR</tt> || <tt>410</tt> || 
+|-
+| [[Kuwait]]
+| [[ISO 3166-1 alpha-2#KW|<tt>KW</tt>]] || <tt>KWT</tt> || <tt>414</tt> || 
+|-
+| [[Kyrgyzstan]]
+| [[ISO 3166-1 alpha-2#KG|<tt>KG</tt>]] || <tt>KGZ</tt> || <tt>417</tt> || 
+|-
+| [[Lao People's Democratic Republic]]
+| [[ISO 3166-1 alpha-2#LA|<tt>LA</tt>]] || <tt>LAO</tt> || <tt>418</tt> || 
+|-
+| [[Latvia]]
+| [[ISO 3166-1 alpha-2#LV|<tt>LV</tt>]] || <tt>LVA</tt> || <tt>428</tt> || 
+|-
+| [[Lebanon]]
+| [[ISO 3166-1 alpha-2#LB|<tt>LB</tt>]] || <tt>LBN</tt> || <tt>422</tt> || 
+|-
+| [[Lesotho]]
+| [[ISO 3166-1 alpha-2#LS|<tt>LS</tt>]] || <tt>LSO</tt> || <tt>426</tt> || 
+|-
+| [[Liberia]]
+| [[ISO 3166-1 alpha-2#LR|<tt>LR</tt>]] || <tt>LBR</tt> || <tt>430</tt> || 
+|-
+| [[Libya]]
+| [[ISO 3166-1 alpha-2#LY|<tt>LY</tt>]] || <tt>LBY</tt> || <tt>434</tt> || 
+|-
+| [[Liechtenstein]]
+| [[ISO 3166-1 alpha-2#LI|<tt>LI</tt>]] || <tt>LIE</tt> || <tt>438</tt> || 
+|-
+| [[Lithuania]]
+| [[ISO 3166-1 alpha-2#LT|<tt>LT</tt>]] || <tt>LTU</tt> || <tt>440</tt> || 
+|-
+| [[Luxembourg]]
+| [[ISO 3166-1 alpha-2#LU|<tt>LU</tt>]] || <tt>LUX</tt> || <tt>442</tt> || 
+|-
+| [[Macao]]
+| [[ISO 3166-1 alpha-2#MO|<tt>MO</tt>]] || <tt>MAC</tt> || <tt>446</tt> || 
+|-
+| [[Republic of Macedonia|Macedonia, the former Yugoslav Republic of]]
+| [[ISO 3166-1 alpha-2#MK|<tt>MK</tt>]] || <tt>MKD</tt> || <tt>807</tt> || 
+|-
+| [[Madagascar]]
+| [[ISO 3166-1 alpha-2#MG|<tt>MG</tt>]] || <tt>MDG</tt> || <tt>450</tt> || 
+|-
+| [[Malawi]]
+| [[ISO 3166-1 alpha-2#MW|<tt>MW</tt>]] || <tt>MWI</tt> || <tt>454</tt> || 
+|-
+| [[Malaysia]]
+| [[ISO 3166-1 alpha-2#MY|<tt>MY</tt>]] || <tt>MYS</tt> || <tt>458</tt> || 
+|-
+| [[Maldives]]
+| [[ISO 3166-1 alpha-2#MV|<tt>MV</tt>]] || <tt>MDV</tt> || <tt>462</tt> || 
+|-
+| [[Mali]]
+| [[ISO 3166-1 alpha-2#ML|<tt>ML</tt>]] || <tt>MLI</tt> || <tt>466</tt> || 
+|-
+| [[Malta]]
+| [[ISO 3166-1 alpha-2#MT|<tt>MT</tt>]] || <tt>MLT</tt> || <tt>470</tt> || 
+|-
+| [[Marshall Islands]]
+| [[ISO 3166-1 alpha-2#MH|<tt>MH</tt>]] || <tt>MHL</tt> || <tt>584</tt> || 
+|-
+| [[Martinique]]
+| [[ISO 3166-1 alpha-2#MQ|<tt>MQ</tt>]] || <tt>MTQ</tt> || <tt>474</tt> || 
+|-
+| [[Mauritania]]
+| [[ISO 3166-1 alpha-2#MR|<tt>MR</tt>]] || <tt>MRT</tt> || <tt>478</tt> || 
+|-
+| [[Mauritius]]
+| [[ISO 3166-1 alpha-2#MU|<tt>MU</tt>]] || <tt>MUS</tt> || <tt>480</tt> || 
+|-
+| [[Mayotte]]
+| [[ISO 3166-1 alpha-2#YT|<tt>YT</tt>]] || <tt>MYT</tt> || <tt>175</tt> || 
+|-
+| [[Mexico]]
+| [[ISO 3166-1 alpha-2#MX|<tt>MX</tt>]] || <tt>MEX</tt> || <tt>484</tt> || 
+|-
+| [[Micronesia, Federated States of]]
+| [[ISO 3166-1 alpha-2#FM|<tt>FM</tt>]] || <tt>FSM</tt> || <tt>583</tt> || 
+|-
+| [[Moldova, Republic of]]
+| [[ISO 3166-1 alpha-2#MD|<tt>MD</tt>]] || <tt>MDA</tt> || <tt>498</tt> || 
+|-
+| [[Monaco]]
+| [[ISO 3166-1 alpha-2#MC|<tt>MC</tt>]] || <tt>MCO</tt> || <tt>492</tt> || 
+|-
+| [[Mongolia]]
+| [[ISO 3166-1 alpha-2#MN|<tt>MN</tt>]] || <tt>MNG</tt> || <tt>496</tt> || 
+|-
+| [[Montenegro]]
+| [[ISO 3166-1 alpha-2#ME|<tt>ME</tt>]] || <tt>MNE</tt> || <tt>499</tt> || 
+|-
+| [[Montserrat]]
+| [[ISO 3166-1 alpha-2#MS|<tt>MS</tt>]] || <tt>MSR</tt> || <tt>500</tt> || 
+|-
+| [[Morocco]]
+| [[ISO 3166-1 alpha-2#MA|<tt>MA</tt>]] || <tt>MAR</tt> || <tt>504</tt> || 
+|-
+| [[Mozambique]]
+| [[ISO 3166-1 alpha-2#MZ|<tt>MZ</tt>]] || <tt>MOZ</tt> || <tt>508</tt> || 
+|-
+| [[Myanmar]]
+| [[ISO 3166-1 alpha-2#MM|<tt>MM</tt>]] || <tt>MMR</tt> || <tt>104</tt> || 
+|-
+| [[Namibia]]
+| [[ISO 3166-1 alpha-2#NA|<tt>NA</tt>]] || <tt>NAM</tt> || <tt>516</tt> || 
+|-
+| [[Nauru]]
+| [[ISO 3166-1 alpha-2#NR|<tt>NR</tt>]] || <tt>NRU</tt> || <tt>520</tt> || 
+|-
+| [[Nepal]]
+| [[ISO 3166-1 alpha-2#NP|<tt>NP</tt>]] || <tt>NPL</tt> || <tt>524</tt> || 
+|-
+| [[Netherlands]]
+| [[ISO 3166-1 alpha-2#NL|<tt>NL</tt>]] || <tt>NLD</tt> || <tt>528</tt> || 
+|-
+| [[New Caledonia]]
+| [[ISO 3166-1 alpha-2#NC|<tt>NC</tt>]] || <tt>NCL</tt> || <tt>540</tt> || 
+|-
+| [[New Zealand]]
+| [[ISO 3166-1 alpha-2#NZ|<tt>NZ</tt>]] || <tt>NZL</tt> || <tt>554</tt> || 
+|-
+| [[Nicaragua]]
+| [[ISO 3166-1 alpha-2#NI|<tt>NI</tt>]] || <tt>NIC</tt> || <tt>558</tt> || 
+|-
+| [[Niger]]
+| [[ISO 3166-1 alpha-2#NE|<tt>NE</tt>]] || <tt>NER</tt> || <tt>562</tt> || 
+|-
+| [[Nigeria]]
+| [[ISO 3166-1 alpha-2#NG|<tt>NG</tt>]] || <tt>NGA</tt> || <tt>566</tt> || 
+|-
+| [[Niue]]
+| [[ISO 3166-1 alpha-2#NU|<tt>NU</tt>]] || <tt>NIU</tt> || <tt>570</tt> || 
+|-
+| [[Norfolk Island]]
+| [[ISO 3166-1 alpha-2#NF|<tt>NF</tt>]] || <tt>NFK</tt> || <tt>574</tt> || 
+|-
+| [[Northern Mariana Islands]]
+| [[ISO 3166-1 alpha-2#MP|<tt>MP</tt>]] || <tt>MNP</tt> || <tt>580</tt> || 
+|-
+| [[Norway]]
+| [[ISO 3166-1 alpha-2#NO|<tt>NO</tt>]] || <tt>NOR</tt> || <tt>578</tt> || 
+|-
+| [[Oman]]
+| [[ISO 3166-1 alpha-2#OM|<tt>OM</tt>]] || <tt>OMN</tt> || <tt>512</tt> || 
+|-
+| [[Pakistan]]
+| [[ISO 3166-1 alpha-2#PK|<tt>PK</tt>]] || <tt>PAK</tt> || <tt>586</tt> || 
+|-
+| [[Palau]]
+| [[ISO 3166-1 alpha-2#PW|<tt>PW</tt>]] || <tt>PLW</tt> || <tt>585</tt> || 
+|-
+| [[State of Palestine|Palestine, State of]]
+| [[ISO 3166-1 alpha-2#PS|<tt>PS</tt>]] || <tt>PSE</tt> || <tt>275</tt> || 
+|-
+| [[Panama]]
+| [[ISO 3166-1 alpha-2#PA|<tt>PA</tt>]] || <tt>PAN</tt> || <tt>591</tt> || 
+|-
+| [[Papua New Guinea]]
+| [[ISO 3166-1 alpha-2#PG|<tt>PG</tt>]] || <tt>PNG</tt> || <tt>598</tt> || 
+|-
+| [[Paraguay]]
+| [[ISO 3166-1 alpha-2#PY|<tt>PY</tt>]] || <tt>PRY</tt> || <tt>600</tt> || 
+|-
+| [[Peru]]
+| [[ISO 3166-1 alpha-2#PE|<tt>PE</tt>]] || <tt>PER</tt> || <tt>604</tt> || 
+|-
+| [[Philippines]]
+| [[ISO 3166-1 alpha-2#PH|<tt>PH</tt>]] || <tt>PHL</tt> || <tt>608</tt> || 
+|-
+| [[Pitcairn]]
+| [[ISO 3166-1 alpha-2#PN|<tt>PN</tt>]] || <tt>PCN</tt> || <tt>612</tt> || 
+|-
+| [[Poland]]
+| [[ISO 3166-1 alpha-2#PL|<tt>PL</tt>]] || <tt>POL</tt> || <tt>616</tt> || 
+|-
+| [[Portugal]]
+| [[ISO 3166-1 alpha-2#PT|<tt>PT</tt>]] || <tt>PRT</tt> || <tt>620</tt> || 
+|-
+| [[Puerto Rico]]
+| [[ISO 3166-1 alpha-2#PR|<tt>PR</tt>]] || <tt>PRI</tt> || <tt>630</tt> || 
+|-
+| [[Qatar]]
+| [[ISO 3166-1 alpha-2#QA|<tt>QA</tt>]] || <tt>QAT</tt> || <tt>634</tt> || 
+|-
+| {{sort|Reunion|[[Réunion]]}}
+| [[ISO 3166-1 alpha-2#RE|<tt>RE</tt>]] || <tt>REU</tt> || <tt>638</tt> || 
+|-
+| [[Romania]]
+| [[ISO 3166-1 alpha-2#RO|<tt>RO</tt>]] || <tt>ROU</tt> || <tt>642</tt> || 
+|-
+| [[Russian Federation]]
+| [[ISO 3166-1 alpha-2#RU|<tt>RU</tt>]] || <tt>RUS</tt> || <tt>643</tt> || 
+|-
+| [[Rwanda]]
+| [[ISO 3166-1 alpha-2#RW|<tt>RW</tt>]] || <tt>RWA</tt> || <tt>646</tt> || 
+|-
+| {{sort|Saint Barthelemy|[[Saint Barthélemy]]}}
+| [[ISO 3166-1 alpha-2#BL|<tt>BL</tt>]] || <tt>BLM</tt> || <tt>652</tt> || 
+|-
+| [[Saint Helena, Ascension and Tristan da Cunha]]
+| [[ISO 3166-1 alpha-2#SH|<tt>SH</tt>]] || <tt>SHN</tt> || <tt>654</tt> || 
+|-
+| [[Saint Kitts and Nevis]]
+| [[ISO 3166-1 alpha-2#KN|<tt>KN</tt>]] || <tt>KNA</tt> || <tt>659</tt> || 
+|-
+| [[Saint Lucia]]
+| [[ISO 3166-1 alpha-2#LC|<tt>LC</tt>]] || <tt>LCA</tt> || <tt>662</tt> || 
+|-
+| [[Saint Martin (French part)]]
+| [[ISO 3166-1 alpha-2#MF|<tt>MF</tt>]] || <tt>MAF</tt> || <tt>663</tt> || 
+|-
+| [[Saint Pierre and Miquelon]]
+| [[ISO 3166-1 alpha-2#PM|<tt>PM</tt>]] || <tt>SPM</tt> || <tt>666</tt> || 
+|-
+| [[Saint Vincent and the Grenadines]]
+| [[ISO 3166-1 alpha-2#VC|<tt>VC</tt>]] || <tt>VCT</tt> || <tt>670</tt> || 
+|-
+| [[Samoa]]
+| [[ISO 3166-1 alpha-2#WS|<tt>WS</tt>]] || <tt>WSM</tt> || <tt>882</tt> || 
+|-
+| [[San Marino]]
+| [[ISO 3166-1 alpha-2#SM|<tt>SM</tt>]] || <tt>SMR</tt> || <tt>674</tt> || 
+|-
+| [[Sao Tome and Principe]]
+| [[ISO 3166-1 alpha-2#ST|<tt>ST</tt>]] || <tt>STP</tt> || <tt>678</tt> || 
+|-
+| [[Saudi Arabia]]
+| [[ISO 3166-1 alpha-2#SA|<tt>SA</tt>]] || <tt>SAU</tt> || <tt>682</tt> || 
+|-
+| [[Senegal]]
+| [[ISO 3166-1 alpha-2#SN|<tt>SN</tt>]] || <tt>SEN</tt> || <tt>686</tt> || 
+|-
+| [[Serbia]]
+| [[ISO 3166-1 alpha-2#RS|<tt>RS</tt>]] || <tt>SRB</tt> || <tt>688</tt> || 
+|-
+| [[Seychelles]]
+| [[ISO 3166-1 alpha-2#SC|<tt>SC</tt>]] || <tt>SYC</tt> || <tt>690</tt> || 
+|-
+| [[Sierra Leone]]
+| [[ISO 3166-1 alpha-2#SL|<tt>SL</tt>]] || <tt>SLE</tt> || <tt>694</tt> || 
+|-
+| [[Singapore]]
+| [[ISO 3166-1 alpha-2#SG|<tt>SG</tt>]] || <tt>SGP</tt> || <tt>702</tt> || 
+|-
+| [[Sint Maarten (Dutch part)]]
+| [[ISO 3166-1 alpha-2#SX|<tt>SX</tt>]] || <tt>SXM</tt> || <tt>534</tt> || 
+|-
+| [[Slovakia]]
+| [[ISO 3166-1 alpha-2#SK|<tt>SK</tt>]] || <tt>SVK</tt> || <tt>703</tt> || 
+|-
+| [[Slovenia]]
+| [[ISO 3166-1 alpha-2#SI|<tt>SI</tt>]] || <tt>SVN</tt> || <tt>705</tt> || 
+|-
+| [[Solomon Islands]]
+| [[ISO 3166-1 alpha-2#SB|<tt>SB</tt>]] || <tt>SLB</tt> || <tt>090</tt> || 
+|-
+| [[Somalia]]
+| [[ISO 3166-1 alpha-2#SO|<tt>SO</tt>]] || <tt>SOM</tt> || <tt>706</tt> || 
+|-
+| [[South Africa]]
+| [[ISO 3166-1 alpha-2#ZA|<tt>ZA</tt>]] || <tt>ZAF</tt> || <tt>710</tt> || 
+|-
+| [[South Georgia and the South Sandwich Islands]]
+| [[ISO 3166-1 alpha-2#GS|<tt>GS</tt>]] || <tt>SGS</tt> || <tt>239</tt> || 
+|-
+| [[South Sudan]]
+| [[ISO 3166-1 alpha-2#SS|<tt>SS</tt>]] || <tt>SSD</tt> || <tt>728</tt> || 
+|-
+| [[Spain]]
+| [[ISO 3166-1 alpha-2#ES|<tt>ES</tt>]] || <tt>ESP</tt> || <tt>724</tt> || 
+|-
+| [[Sri Lanka]]
+| [[ISO 3166-1 alpha-2#LK|<tt>LK</tt>]] || <tt>LKA</tt> || <tt>144</tt> || 
+|-
+| [[Sudan]]
+| [[ISO 3166-1 alpha-2#SD|<tt>SD</tt>]] || <tt>SDN</tt> || <tt>729</tt> || 
+|-
+| [[Suriname]]
+| [[ISO 3166-1 alpha-2#SR|<tt>SR</tt>]] || <tt>SUR</tt> || <tt>740</tt> || 
+|-
+| [[Svalbard and Jan Mayen]]
+| [[ISO 3166-1 alpha-2#SJ|<tt>SJ</tt>]] || <tt>SJM</tt> || <tt>744</tt> || 
+|-
+| [[Swaziland]]
+| [[ISO 3166-1 alpha-2#SZ|<tt>SZ</tt>]] || <tt>SWZ</tt> || <tt>748</tt> || 
+|-
+| [[Sweden]]
+| [[ISO 3166-1 alpha-2#SE|<tt>SE</tt>]] || <tt>SWE</tt> || <tt>752</tt> || 
+|-
+| [[Switzerland]]
+| [[ISO 3166-1 alpha-2#CH|<tt>CH</tt>]] || <tt>CHE</tt> || <tt>756</tt> || 
+|-
+| [[Syrian Arab Republic]]
+| [[ISO 3166-1 alpha-2#SY|<tt>SY</tt>]] || <tt>SYR</tt> || <tt>760</tt> || 
+|-
+| [[Taiwan|<!--DO NOT CHANGE-->Taiwan, Province of China<!--This is the country name used in ISO 3166: http://www.iso.org/iso/home/standards/country_codes/iso-3166-1_decoding_table.htm#TW . If you disagree with this naming, contact the ISO 3166/MA; we must follow the published standard for this article. -->]]
+| [[ISO 3166-1 alpha-2#TW|<tt>TW</tt>]] || <tt>TWN</tt> || <tt>158</tt> || 
+|-
+| [[Tajikistan]]
+| [[ISO 3166-1 alpha-2#TJ|<tt>TJ</tt>]] || <tt>TJK</tt> || <tt>762</tt> || 
+|-
+| [[Tanzania, United Republic of]]
+| [[ISO 3166-1 alpha-2#TZ|<tt>TZ</tt>]] || <tt>TZA</tt> || <tt>834</tt> || 
+|-
+| [[Thailand]]
+| [[ISO 3166-1 alpha-2#TH|<tt>TH</tt>]] || <tt>THA</tt> || <tt>764</tt> || 
+|-
+| [[Timor-Leste]]
+| [[ISO 3166-1 alpha-2#TL|<tt>TL</tt>]] || <tt>TLS</tt> || <tt>626</tt> || 
+|-
+| [[Togo]]
+| [[ISO 3166-1 alpha-2#TG|<tt>TG</tt>]] || <tt>TGO</tt> || <tt>768</tt> || 
+|-
+| [[Tokelau]]
+| [[ISO 3166-1 alpha-2#TK|<tt>TK</tt>]] || <tt>TKL</tt> || <tt>772</tt> || 
+|-
+| [[Tonga]]
+| [[ISO 3166-1 alpha-2#TO|<tt>TO</tt>]] || <tt>TON</tt> || <tt>776</tt> || 
+|-
+| [[Trinidad and Tobago]]
+| [[ISO 3166-1 alpha-2#TT|<tt>TT</tt>]] || <tt>TTO</tt> || <tt>780</tt> || 
+|-
+| [[Tunisia]]
+| [[ISO 3166-1 alpha-2#TN|<tt>TN</tt>]] || <tt>TUN</tt> || <tt>788</tt> || 
+|-
+| [[Turkey]]
+| [[ISO 3166-1 alpha-2#TR|<tt>TR</tt>]] || <tt>TUR</tt> || <tt>792</tt> || 
+|-
+| [[Turkmenistan]]
+| [[ISO 3166-1 alpha-2#TM|<tt>TM</tt>]] || <tt>TKM</tt> || <tt>795</tt> || 
+|-
+| [[Turks and Caicos Islands]]
+| [[ISO 3166-1 alpha-2#TC|<tt>TC</tt>]] || <tt>TCA</tt> || <tt>796</tt> || 
+|-
+| [[Tuvalu]]
+| [[ISO 3166-1 alpha-2#TV|<tt>TV</tt>]] || <tt>TUV</tt> || <tt>798</tt> || 
+|-
+| [[Uganda]]
+| [[ISO 3166-1 alpha-2#UG|<tt>UG</tt>]] || <tt>UGA</tt> || <tt>800</tt> || 
+|-
+| [[Ukraine]]
+| [[ISO 3166-1 alpha-2#UA|<tt>UA</tt>]] || <tt>UKR</tt> || <tt>804</tt> || 
+|-
+| [[United Arab Emirates]]
+| [[ISO 3166-1 alpha-2#AE|<tt>AE</tt>]] || <tt>ARE</tt> || <tt>784</tt> || 
+|-
+| [[United Kingdom]]
+| [[ISO 3166-1 alpha-2#GB|<tt>GB</tt>]] || <tt>GBR</tt> || <tt>826</tt> || 
+|-
+| [[United States]]
+| [[ISO 3166-1 alpha-2#US|<tt>US</tt>]] || <tt>USA</tt> || <tt>840</tt> || 
+|-
+| [[United States Minor Outlying Islands]]
+| [[ISO 3166-1 alpha-2#UM|<tt>UM</tt>]] || <tt>UMI</tt> || <tt>581</tt> || 
+|-
+| [[Uruguay]]
+| [[ISO 3166-1 alpha-2#UY|<tt>UY</tt>]] || <tt>URY</tt> || <tt>858</tt> || 
+|-
+| [[Uzbekistan]]
+| [[ISO 3166-1 alpha-2#UZ|<tt>UZ</tt>]] || <tt>UZB</tt> || <tt>860</tt> || 
+|-
+| [[Vanuatu]]
+| [[ISO 3166-1 alpha-2#VU|<tt>VU</tt>]] || <tt>VUT</tt> || <tt>548</tt> || 
+|-
+| [[Venezuela, Bolivarian Republic of]]
+| [[ISO 3166-1 alpha-2#VE|<tt>VE</tt>]] || <tt>VEN</tt> || <tt>862</tt> || 
+|-
+| [[Viet Nam]]
+| [[ISO 3166-1 alpha-2#VN|<tt>VN</tt>]] || <tt>VNM</tt> || <tt>704</tt> || 
+|-
+| [[Virgin Islands, British]]
+| [[ISO 3166-1 alpha-2#VG|<tt>VG</tt>]] || <tt>VGB</tt> || <tt>092</tt> || 
+|-
+| [[Virgin Islands, U.S.]]
+| [[ISO 3166-1 alpha-2#VI|<tt>VI</tt>]] || <tt>VIR</tt> || <tt>850</tt> || 
+|-
+| [[Wallis and Futuna]]
+| [[ISO 3166-1 alpha-2#WF|<tt>WF</tt>]] || <tt>WLF</tt> || <tt>876</tt> || 
+|-
+| [[Western Sahara]]
+| [[ISO 3166-1 alpha-2#EH|<tt>EH</tt>]] || <tt>ESH</tt> || <tt>732</tt> || 
+|-
+| [[Yemen]]
+| [[ISO 3166-1 alpha-2#YE|<tt>YE</tt>]] || <tt>YEM</tt> || <tt>887</tt> || 
+|-
+| [[Zambia]]
+| [[ISO 3166-1 alpha-2#ZM|<tt>ZM</tt>]] || <tt>ZMB</tt> || <tt>894</tt> || 
+|-
+| [[Zimbabwe]]
+| [[ISO 3166-1 alpha-2#ZW|<tt>ZW</tt>]] || <tt>ZWE</tt> || <tt>716</tt> || 
+|}
+
