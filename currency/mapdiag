@@ -1,0 +1,39 @@
+	fmt.Printf("len(countryNameMap): %d\n", len(countryNameMap))
+	keys := make([]string, 0, len(countryNameMap))
+	for key, _ := range countryNameMap {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	for _, key := range keys {
+		fmt.Printf("key: %s, value: %s\n", key, countryNameMap[key])
+	}
+
+	fmt.Printf("len(currencyNameMap): %d\n", len(currencyNameMap))
+	keys = make([]string, 0, len(currencyNameMap))
+	for key, _ := range currencyNameMap {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	for _, key := range keys {
+		fmt.Printf("key: %s, value: %s\n", key, currencyNameMap[key])
+	}
+
+	fmt.Printf("len(currencyCodeMap): %d\n", len(currencyCodeMap))
+	keys = make([]string, 0, len(currencyCodeMap))
+	for key, _ := range currencyCodeMap {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	for _, key := range keys {
+		fmt.Printf("key: %s, value: %s\n", key, currencyCodeMap[key])
+	}
+
+	fmt.Printf("len(currencyNumberMap): %d\n", len(currencyNumberMap))
+	keys = make([]string, 0, len(currencyNumberMap))
+	for key, _ := range currencyNumberMap {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	for _, key := range keys {
+		fmt.Printf("key: %s, value: %s\n", key, currencyNumberMap[key])
+	}

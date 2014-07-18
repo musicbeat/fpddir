@@ -29,10 +29,10 @@ type Loader interface {
 // Server is the interface that wraps the Serve method.
 //
 // Serve sets up the HTTP server endpoint for search.
-// It uses the supplied base url. It returns the full
+// It uses the supplied port. It returns the full
 // search url. If an error occurs, it returns that as well.
 type Server interface {
-	Serve(baseurl string) (searchurl string, err error)
+	Serve(port string) (searchurl string, err error)
 }
 
 // Searcher is the interface that wraps the Search method.
