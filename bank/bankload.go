@@ -1,9 +1,7 @@
-package stddata
+package bank
 
 import (
 	"bufio"
-	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -21,6 +19,7 @@ type Bank struct {
 	BookEntrySecuritiesTransferStatus string // Length 1; Column 93
 	DateOfLastRevision string // Length 8; Columns 94-101
 }
+// Column map:
 var rn = [...]int {0, 9}
 var tn = [...]int {9, 27}
 var cn = [...]int {27, 63}
@@ -31,11 +30,28 @@ var fs = [...]int {91, 92}
 var be = [...]int {92, 93}
 var dt = [...]int {93, 101}
 
-func LoadFpddir() {
+type Banks struct {
+	Banks []Bank
+}
+
+var routingNumberMap map[string]Bank
+var telegraphicNameMap map[string]Bank
+var customerNameMap map[string]Bank
+
+// Load implements Loader interface.
+func (b Bank) Load() (n int, err error) {
+	// Initialize the maps:
+	routingNumberMap = make(map[string]Bank)
+	telegraphicNameMap = make(map[string]Bank)
+	customerNameMap = make(map[string]Bank)
+
 	res, err := http.Get("http://www.fededirectory.frb.org/fpddir.txt")
 	if err != nil {
 		log.Fatal(err)
+		return 0, err
 	}
+	defer res.Body.Close()
+
 	bio := bufio.NewReader(res.Body)
 	for {
 		line, err := bio.ReadBytes('\n')
@@ -43,14 +59,15 @@ func LoadFpddir() {
 			break
 		}
 		if err != nil {
-			panic(err)
+			log.Fatal(err)
+			return 0, err
 		}
 		sline := strings.TrimRight(string(line), "\n")
 		// fmt.Printf("%s\n", sline)
-		//         "325280039MAC FCU           MAC FEDERAL CREDIT UNION            AKFT WAINWRIGHT            Y Y20120606\n"
+		// fmt.Printf("325280039MAC FCU           MAC FEDERAL CREDIT UNION            AKFT WAINWRIGHT            Y Y20120606\n")
 		// fmt.Printf("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\n")
 		// fmt.Printf("          1         2         3         4         5         6         7         8         9         0\n")
-		var b Bank
+		// var b Bank
 		b.RoutingNumber = strings.TrimSpace(sline[rn[0]:rn[1]])
 		b.TelegraphicName = strings.TrimSpace(sline[tn[0]:tn[1]])
 		b.CustomerName = strings.TrimSpace(sline[cn[0]:cn[1]])
@@ -61,12 +78,11 @@ func LoadFpddir() {
 		b.BookEntrySecuritiesTransferStatus = strings.TrimSpace(sline[be[0]:be[1]])
 		b.DateOfLastRevision = strings.TrimSpace(sline[dt[0]:dt[1]])
 
-		j, err := json.MarshalIndent(b, "", "  ")
-		if err == nil {
-			fmt.Printf("%s\n", j)
-		} else {
-			fmt.Printf("gads: %s\n", err)
-		}
+		// add the Bank to the maps:
+		routingNumberMap[b.RoutingNumber] = b
+		telegraphicNameMap[b.TelegraphicName] = b
+		customerNameMap[b.CustomerName] = b
+
 	}
-	defer res.Body.Close()
+	return len(routingNumberMap), err
 }
