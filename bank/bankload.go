@@ -30,10 +30,6 @@ var fs = [...]int {91, 92}
 var be = [...]int {92, 93}
 var dt = [...]int {93, 101}
 
-type Banks struct {
-	Banks []Bank
-}
-
 var routingNumberMap map[string]Bank
 var telegraphicNameMap map[string]Bank
 var customerNameMap map[string]Bank

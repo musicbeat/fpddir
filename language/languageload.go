@@ -1,4 +1,4 @@
-package stddata
+package language
 /*
  * data loader component for ISO 639.2 language codes.
  * source is US Library of Congress
@@ -18,13 +18,10 @@ package stddata
  */
 
 import (
-	"encoding/json"
 	"encoding/csv"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
-	"sort"
 )
 
 type Language struct {
@@ -34,25 +31,20 @@ type Language struct {
 	EnglishName			string
 	FrenchName			string
 }
-type Languages struct {
-	Languages []Language
-}
 
-var LanguageMaps map[string] map[string]Language
+var alphaMap map[string]Language
+var englishNameMap map[string]Language
 
-func LoadIso639() {
-	var alphaMap map[string]Language
-	var englishNameMap map[string]Language
+// Load implements the Loader interface.
+func (l Language) Load() (n int, err error) {
 	// initialize the maps:
 	alphaMap = make(map[string]Language)
 	englishNameMap = make(map[string]Language)
-	LanguageMaps = make(map[string] map[string]Language)
-	LanguageMaps["Alpha"] = alphaMap
-	LanguageMaps["English"] = englishNameMap
 	
 	res, err := http.Get("http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt")
 	if err != nil {
 		log.Fatal(err)
+		return 0, err
 	}
 
 	reader := csv.NewReader(res.Body)
@@ -62,16 +54,15 @@ func LoadIso639() {
 
 	defer res.Body.Close()
 
-	var languages Languages
 	for {
-		// read just one record, but we could ReadAll() as well
+		// read just one record
 		record, err := reader.Read()
 		// end-of-file is fitted into err
 		if err == io.EOF {
 			break
 		} else if err != nil {
-			fmt.Println("Error:", err)
-			return
+			log.Fatal(err)
+			return 0, err
 		}
 
 		var l Language
@@ -81,29 +72,9 @@ func LoadIso639() {
 		l.EnglishName = record[3]
 		l.FrenchName = record[4]
 
-		languages.Languages = append(languages.Languages, l)
-
 		alphaMap[l.Alpha3bibliographic] = l
 		englishNameMap[l.EnglishName] = l
 
 	}
-	for key, value := range LanguageMaps {
-		fmt.Println("Map: ", key)
-		var keys []string
-		for k := range value {
-			keys = append(keys, k)
-		}
-		sort.Strings(keys)
-		for _, k := range(keys) {
-			fmt.Println("Key: ", k, "Value: ", value[k])
-		}
-	}
-	fmt.Println("Json:")
-	j, err := json.MarshalIndent(languages, "", "  ")
-	if err == nil {
-		fmt.Printf("%s\n", j)
-	} else {
-		fmt.Printf("gads: %s\n", err)
-	}
-
+	return len(alphaMap), err
 }
