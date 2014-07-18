@@ -1,15 +1,15 @@
-package stddata
+package country
 
 import "strings"
 /*
-iso3166data is derived from the ISO 3166-1 information
+countrydata is derived from the ISO 3166-1 information
 presented on wikipedia:
 http://en.wikipedia.org/wiki/ISO_3166-1
 The data was obtained from the wiki source for "Officially
 assigned code elements". Some munging occurred, then the
 tab-delimited csv file data in this source file was constructed.
 */
-var iso3166data = strings.NewReader(`Afghanistan	AF	AFG	004
+var countrydata = strings.NewReader(`Afghanistan	AF	AFG	004
 Åland Islands	AX	ALA	248
 Albania	AL	ALB	008
 Algeria	DZ	DZA	012

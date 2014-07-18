@@ -67,7 +67,7 @@ func (b Bank) Load() (n int, err error) {
 		// fmt.Printf("325280039MAC FCU           MAC FEDERAL CREDIT UNION            AKFT WAINWRIGHT            Y Y20120606\n")
 		// fmt.Printf("01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890\n")
 		// fmt.Printf("          1         2         3         4         5         6         7         8         9         0\n")
-		// var b Bank
+
 		b.RoutingNumber = strings.TrimSpace(sline[rn[0]:rn[1]])
 		b.TelegraphicName = strings.TrimSpace(sline[tn[0]:tn[1]])
 		b.CustomerName = strings.TrimSpace(sline[cn[0]:cn[1]])
