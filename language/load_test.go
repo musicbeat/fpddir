@@ -5,11 +5,15 @@ import (
 	"testing"
 )
 
+var expected = 486
+
 func TestLoad(t *testing.T) {
 	fmt.Println("Test: language.Load")
 	l := new(Language)
-	n, err := l.Load()
-	// check count or something.
-	fmt.Printf("%d\n", n)
-	fmt.Printf("%s\n", err)
+	if n, err := l.Load(); n!= expected {
+		t.Errorf("language.Load n=%d, want %d\n", n, expected)
+		if err != nil {
+			t.Errorf("language.Load err %s\n", err)
+		}
+	}
 }
