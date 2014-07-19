@@ -32,7 +32,7 @@ type Loader interface {
 // It uses the supplied port. It returns the full
 // search url. If an error occurs, it returns that as well.
 type Server interface {
-	Serve(port string) (searchurl string, err error)
+	Serve(port string) (err error)
 }
 
 // Searcher is the interface that wraps the Search method.
