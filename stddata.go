@@ -11,9 +11,16 @@ for lookups and queries. The standards are:
 	ISO 4217 Currency Codes
 	ISO 3166-1 Country Codes (Officially Assigned)
 
-Other standards for future work have been identified, including:
-	US Postal Codes and Cities
-	... to be seen
+Packages
+
+The pieces of stddata's implementation are organized
+as follows:
+	stddata - interfaces, types, and functions for managing the data providers
+	stddata/bank - Federal Reserve E-Payments Routing Directory
+	stddata/country - ISO 3166-1 Country Codes (Officially Assigned)
+	stddata/currency - ISO 4217 Currency Codes
+	stddata/language - ISO 639 Language Codes
+
 */
 package stddata
 
@@ -26,23 +33,34 @@ type Loader interface {
 	Load() (n int, err error)
 }
 
-// Server is the interface that wraps the Serve method.
+type Registration struct {
+}
+// Registrar is the interface that wraps the Register method.
 //
-// Serve sets up the HTTP server endpoint for search.
-// It uses the supplied port. It returns the full
-// search url. If an error occurs, it returns that as well.
-type Server interface {
-	Serve(port string) (err error)
+// Register returns the Registration information for a
+// provider. The Registration information allows the caller
+// to set up the endpoints for serving the provider.
+type Registrar interface {
+	Register (r Registration, err error)
 }
 
 // Searcher is the interface that wraps the Search method.
 //
 // Search takes the query string, attempts to find a match,
-// and returns a JSON result. If an error occurs, it returns 
-// that as well.
+// and returns an interface as the result. If an error occurs,
+// it returns that as well. The value that is returned as v
+// is intended to be marshaled as json -- it is expected to 
+// be the collection of entities that match the search.
 type Searcher interface {
-	Search(q string) (r string, err error)
+	Search(q string) (v interface{}, err error)
 }
 
-
+// Provider is the interface that wraps all these parts
+// together. A type that implements Provider's methods
+// can be managed as a Standard Data Provider.
+type Provider interface {
+	Loader
+	Registrar
+	Searcher
+}
 
