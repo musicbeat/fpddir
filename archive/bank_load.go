@@ -82,3 +82,11 @@ func (b Bank) Load() (n int, err error) {
 	}
 	return len(routingNumberMap), err
 }
+
+// Search implements the Searcher interface.
+//
+// Search returns a collection as an interface{} and error. The collection
+// contains either the collection of results to the search.
+func Search (q string) (result []Bank, err error) {
+	return nil, nil
+}
