@@ -13,10 +13,28 @@ func TestBankprovider(t *testing.T) {
 	var p Provider
 	p = new(BankProvider)
 	n, err := p.Load()
+	if err != nil {
+		t.Fatal()
+	}
 	if n != expected {
 		t.Fatalf("Expected to load %d, loaded %d\n", expected, n)
 	}
-	// check count or something.
-	fmt.Printf("%d\n", n)
-	fmt.Printf("%s\n", err)
+	// name search:
+	names, err := p.Search("name", "AB")
+	if err != nil {
+		t.Fatalf("Err %v\n", err)
+	}
+	fmt.Println("names %s\n", names)
+	// name search:
+	names, err = p.Search("name", "ab")
+	if err != nil {
+		t.Fatalf("Err %v\n", err)
+	}
+	fmt.Println("names %s\n", names)
+	// number search:
+	numbers, err := p.Search("number", "123")
+	if err != nil {
+		t.Fatalf("Err %v\n", err)
+	}
+	fmt.Println("numbers %s\n", numbers)
 }

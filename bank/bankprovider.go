@@ -27,7 +27,7 @@ type BankProvider struct {
 }
 
 type bankIndex struct {
-	bankMap  map[string]Bank
+	bankMap  map[string][]Bank
 	bankKeys []string
 }
 
@@ -46,7 +46,7 @@ type Bank struct {
 
 // BankResult is the interface{} that is returned from Search
 type BankResult struct {
-	banks []Bank
+	banks [][]Bank
 }
 
 // Column map:
@@ -60,9 +60,9 @@ var fs = [...]int{91, 92}
 var be = [...]int{92, 93}
 var dt = [...]int{93, 101}
 
-var routingNumberMap map[string]Bank
-var telegraphicNameMap map[string]Bank
-var customerNameMap map[string]Bank
+var routingNumberMap map[string][]Bank
+var telegraphicNameMap map[string][]Bank
+var customerNameMap map[string][]Bank
 
 // Load does the heavy lifting of retrieving the Fed's directory
 // of banks, a fixed format text file served via http, and
@@ -70,9 +70,9 @@ var customerNameMap map[string]Bank
 func (p *BankProvider) Load() (n int, err error) {
 	// Initialize the maps:
 	p.bankIndexes = make(map[string]bankIndex)
-	routingNumberMap = make(map[string]Bank)
-	telegraphicNameMap = make(map[string]Bank)
-	customerNameMap = make(map[string]Bank)
+	routingNumberMap = make(map[string][]Bank)
+	telegraphicNameMap = make(map[string][]Bank)
+	customerNameMap = make(map[string][]Bank)
 
 	res, err := http.Get("http://www.fededirectory.frb.org/fpddir.txt")
 	if err != nil {
@@ -109,27 +109,29 @@ func (p *BankProvider) Load() (n int, err error) {
 		b.DateOfLastRevision = strings.TrimSpace(sline[dt[0]:dt[1]])
 
 		// add the Bank to the maps:
-		routingNumberMap[b.RoutingNumber] = b
-		telegraphicNameMap[b.TelegraphicName] = b
-		customerNameMap[b.CustomerName] = b
+		routingNumberMap[b.RoutingNumber] = append(routingNumberMap[b.RoutingNumber], b)
+		telegraphicNameMap[b.TelegraphicName] = append(telegraphicNameMap[b.TelegraphicName], b)
+		customerNameMap[b.CustomerName] = append(customerNameMap[b.CustomerName], b)
 
 	}
 	p.loaded = true
 	p.size = len(routingNumberMap)
 	p.storeData("number", routingNumberMap)
-	p.storeData("name", routingNumberMap)
-	p.storeData("tele", routingNumberMap)
+	p.storeData("name", customerNameMap)
+	p.storeData("tele", telegraphicNameMap)
 	return len(routingNumberMap), err
 }
 
-func (p *BankProvider) storeData(s string, m map[string]Bank) {
+func (p *BankProvider) storeData(s string, m map[string][]Bank) {
 	// store the map
 	var bi bankIndex
 	bi.bankMap = m
 	// extract the keys
 	bi.bankKeys = make([]string, len(m))
-	for k := range m {
-		bi.bankKeys = append(bi.bankKeys, k)
+	i := 0
+	for k, _ := range m {
+		bi.bankKeys[i] = k
+		i++
 	}
 	// sort the keys
 	sort.Strings(bi.bankKeys)
@@ -159,14 +161,17 @@ func (p *BankProvider) Search(s string, q string) (result interface{}, err error
 func doSearch(bi bankIndex, q string) (res BankResult) {
 	// prepare the response. allocate enough space for the response to be the 
 	// entire data set.
-	res.banks = make([]Bank,len(bi.bankKeys))
+	tmp := make([][]Bank, len(bi.bankKeys))
 	// brute force the sorted list of keys, looking for a match to 'q.*'.
 	// add each match to the result array. The results are added in the
 	// order of the sorted keys, so the results are sorted.
+	i := 0
 	for k := range bi.bankKeys {
 		if strings.EqualFold(q, bi.bankKeys[k][0:len(q)]) {
-			res.banks = append(res.banks, bi.bankMap[bi.bankKeys[k]])
+			tmp[i] = bi.bankMap[bi.bankKeys[k]]
+			i++
 		}
 	}
+	res.banks = tmp[0:i]
 	return res
 }
