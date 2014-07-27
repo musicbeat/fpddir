@@ -114,11 +114,11 @@ func (p *BankProvider) Load() (n int, err error) {
 		customerNameMap[b.CustomerName] = append(customerNameMap[b.CustomerName], b)
 
 	}
-	p.loaded = true
-	p.size = len(routingNumberMap)
 	p.storeData("number", routingNumberMap)
 	p.storeData("name", customerNameMap)
 	p.storeData("tele", telegraphicNameMap)
+	p.size = len(routingNumberMap)
+	p.loaded = true
 	return len(routingNumberMap), err
 }
 

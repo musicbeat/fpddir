@@ -56,7 +56,6 @@ func (p *CountryProvider) Load() (n int, err error) {
 	alpha3Map = make(map[string][]Country)
 	numericMap = make(map[string][]Country)
 
-
 	reader := csv.NewReader(countrydata)
 	reader.Comma = '\t'
 	reader.FieldsPerRecord = 4
@@ -86,12 +85,12 @@ func (p *CountryProvider) Load() (n int, err error) {
 		numericMap[c.NumericCode] = append(numericMap[c.NumericCode], c)
 
 	}
-	p.loaded = true
-	p.size = len(englishNameMap)
 	p.storeData("name", englishNameMap)
 	p.storeData("alpha2", alpha2Map)
 	p.storeData("alpha3", alpha3Map)
 	p.storeData("number", numericMap)
+	p.size = len(englishNameMap)
+	p.loaded = true
 	return len(englishNameMap), err
 }
 
