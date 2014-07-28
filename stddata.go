@@ -31,12 +31,13 @@ as follows:
 package stddata
 
 import (
+	"encoding/json"
 	"errors"
+	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"strings"
-
-	"github.com/musicbeat/stddata/bank"
 )
 
 // Provider is the interface that wraps all the interfaces
@@ -78,11 +79,24 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// get the "index=query" parts of the request, for example, "name=Abc".
 	v := strings.Split(r.URL.RawQuery, "=")
 	index := v[0]
+	if len(index) < 1 {
+		// TODO: need to supply a 400 Bad Request response
+		return
+	}
 	query := v[1]
+	if len(query) < 1 {
+		// TODO: need to supply a 400 Bad Request response
+	}
 	res, err := s.provider.Search(index, query)
 	if err != nil {
-		// need to supply HTTP status codes for 503, 400
+		// TODO: need to supply HTTP status codes for 503, 400
 		log.Printf("Error %v\n", err)
 	}
 	// convert result to json
+	j, err := json.MarshalIndent(res, "", "  ")
+	if err != nil {
+		log.Fatal("bank.DumpServer: ", err)
+		return
+	}
+	io.WriteString(w, fmt.Sprintf("%s\n",j))
 }
