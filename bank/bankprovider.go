@@ -145,12 +145,12 @@ func (p *BankProvider) storeData(s string, m map[string][]Bank) {
 // If the value in index does not match the name of a map, an error is returned.
 // The keys in the map specified by index are searched using a regex-like 'q.*', and
 // any matching Banks are returned in the result.
-func (p *BankProvider) Search(s string, q string) (result interface{}, err error) {
+func (p *BankProvider) Search(index string, q string) (result interface{}, err error) {
 	// make sure the data is loaded
 	if p.loaded != true {
 		return nil, errors.New("this should be a 503 Service Unavailable by the time it gets to the client")
 	}
-	bi, found := p.bankIndexes[s]
+	bi, found := p.bankIndexes[index]
 	if !found {
 		// search cannot be performed
 		return nil, errors.New("this should be a 400 Bad Request by the time it gets to the client")

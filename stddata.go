@@ -30,6 +30,15 @@ as follows:
 */
 package stddata
 
+import (
+	"errors"
+	"log"
+	"net/http"
+	"strings"
+
+	"github.com/musicbeat/stddata/bank"
+)
+
 // Provider is the interface that wraps all the interfaces
 // together. A type that implements Provider's methods
 // can be managed as a Standard Data Provider.
@@ -46,3 +55,34 @@ type Provider interface {
 	Search(index string, q string) (v interface{}, err error)
 }
 
+// Service is used to handle http access to the stddata providers' data.
+type Service struct {
+	provider	Provider
+	count		int
+	entityName		string
+}
+
+func (s *Service) LoadProvider(p Provider, e string) (err error) {
+	s.provider = p
+	s.entityName = e
+	n, err := s.provider.Load()
+	if err != nil {
+		log.Printf("Provider for %s failed to load. %s\n", e, err)
+		return errors.New("let the user get a 503 Service Unavailable for this provider")
+	}
+	s.count = n
+	return nil
+}
+
+func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	// get the "index=query" parts of the request, for example, "name=Abc".
+	v := strings.Split(r.URL.RawQuery, "=")
+	index := v[0]
+	query := v[1]
+	res, err := s.provider.Search(index, query)
+	if err != nil {
+		// need to supply HTTP status codes for 503, 400
+		log.Printf("Error %v\n", err)
+	}
+	// convert result to json
+}

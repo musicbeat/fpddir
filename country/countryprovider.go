@@ -5,7 +5,7 @@
 /*
 Package country implenments the methods of a stddata.Provider.
 It provides searches against the data set of ISO 3166-2
-country codes. Source data is declared in iso3166data.go
+country codes. Source data is declared in countrydata.go
 */
 package country
 
