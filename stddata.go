@@ -17,9 +17,15 @@ The pieces of stddata's implementation are organized
 as follows:
 	stddata - interfaces, types, and functions for managing the data providers
 	stddata/bank - Federal Reserve E-Payments Routing Directory
+		A handy, fixed format text file available at the Fed's website
 	stddata/country - ISO 3166-1 Country Codes (Officially Assigned)
+		ISO charges for access to this information through their website, but
+		Wikipedia has a table of these codes. A data set was extracted from
+		Wikipedia's website for use in this package.
 	stddata/currency - ISO 4217 Currency Codes
+		A handy xml document available from iso.org's website.
 	stddata/language - ISO 639 Language Codes
+		A handy, pipe-delimited csv file.
 
 */
 package stddata

@@ -21,39 +21,39 @@ func TestCurrencyProviderLoad(t *testing.T) {
 	}
 }
 func TestCountrySearch(t *testing.T) {
-	names, err := p.Search("country", "A")
+	matches, err := p.Search("country", "A")
 	if err != nil {
 		t.Fatalf("Err %v\n", err)
 	}
-	fmt.Println("names %s\n", names)
+	fmt.Println("matches %s\n", matches)
 }
 func TestNameSearch(t *testing.T) {
-	names, err := p.Search("name", "A")
+	matches, err := p.Search("name", "A")
 	if err != nil {
 		t.Fatalf("Err %v\n", err)
 	}
-	fmt.Println("names %s\n", names)
+	fmt.Println("matches %s\n", matches)
 }
 func TestNameSearchLowerCase(t *testing.T) {
-	names, err := p.Search("name", "a")
+	matches, err := p.Search("name", "a")
 	if err != nil {
 		t.Fatalf("Err %v\n", err)
 	}
-	fmt.Println("names %s\n", names)
+	fmt.Println("matches %s\n", matches)
 }
 func TestCodeSearch(t *testing.T) {
-	names, err := p.Search("code", "E")
+	matches, err := p.Search("code", "E")
 	if err != nil {
 		t.Fatalf("Err %v\n", err)
 	}
-	fmt.Println("names %s\n", names)
+	fmt.Println("matches %s\n", matches)
 }
 func TestNumberSearch(t *testing.T) {
-	names, err := p.Search("number", "0")
+	matches, err := p.Search("number", "0")
 	if err != nil {
 		t.Fatalf("Err %v\n", err)
 	}
-	fmt.Println("names %s\n", names)
+	fmt.Println("matches %s\n", matches)
 }
 func BenchmarkNameSearch(b *testing.B) {
 	p = new(CurrencyProvider)
