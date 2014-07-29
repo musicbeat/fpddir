@@ -8,7 +8,7 @@ import (
 )
 var p Provider
 // number of banks (at least for now)
-var expected = 8648
+var expected = 8647
 
 func TestBankProviderLoad(t *testing.T) {
 	fmt.Println("Test: bank.Load")

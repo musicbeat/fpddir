@@ -58,20 +58,20 @@ type Provider interface {
 
 // Service is used to handle http access to the stddata providers' data.
 type Service struct {
-	provider	Provider
-	count		int
-	entityName		string
+	Provider	Provider
+	Count		int
+	EntityName		string
 }
 
 func (s *Service) LoadProvider(p Provider, e string) (err error) {
-	s.provider = p
-	s.entityName = e
-	n, err := s.provider.Load()
+	s.Provider = p
+	s.EntityName = e
+	n, err := s.Provider.Load()
 	if err != nil {
 		log.Printf("Provider for %s failed to load. %s\n", e, err)
 		return errors.New("let the user get a 503 Service Unavailable for this provider")
 	}
-	s.count = n
+	s.Count = n
 	return nil
 }
 
@@ -87,7 +87,7 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if len(query) < 1 {
 		// TODO: need to supply a 400 Bad Request response
 	}
-	res, err := s.provider.Search(index, query)
+	res, err := s.Provider.Search(index, query)
 	if err != nil {
 		// TODO: need to supply HTTP status codes for 503, 400
 		log.Printf("Error %v\n", err)
