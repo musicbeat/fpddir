@@ -46,7 +46,7 @@ type Bank struct {
 
 // BankResult is the interface{} that is returned from Search
 type BankResult struct {
-	banks [][]Bank
+	Banks [][]Bank
 }
 
 // Column map:
@@ -172,6 +172,6 @@ func doSearch(bi bankIndex, q string) (res BankResult) {
 			i++
 		}
 	}
-	res.banks = tmp[0:i]
+	res.Banks = tmp[0:i]
 	return res
 }

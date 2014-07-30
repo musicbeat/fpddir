@@ -47,7 +47,7 @@ type Currencies struct {
 
 // CurrencyResult is the interface{} that is returned from Search
 type CurrencyResult struct {
-	currencies [][]Currency
+	Currencies [][]Currency
 }
 
 var countryNameMap map[string][]Currency
@@ -155,6 +155,6 @@ func doSearch(ci currencyIndex, q string) (res CurrencyResult) {
 			}
 		}
 	}
-	res.currencies = tmp[0:i]
+	res.Currencies = tmp[0:i]
 	return res
 }

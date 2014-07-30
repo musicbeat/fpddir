@@ -54,7 +54,7 @@ type Language struct {
 
 // LanguageResult is the interface{} that is returned from Search
 type LanguageResult struct {
-	languages [][]Language
+	Languages [][]Language
 }
 
 var alphaMap map[string][]Language
@@ -162,6 +162,6 @@ func doSearch(li languageIndex, q string) (res LanguageResult) {
 			i++
 		}
 	}
-	res.languages = tmp[0:i]
+	res.Languages = tmp[0:i]
 	return res
 }

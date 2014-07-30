@@ -39,7 +39,7 @@ type Country struct {
 
 // CountryResult is the interface{} that is returned from Search
 type CountryResult struct {
-	countries [][]Country
+	Countries [][]Country
 }
 
 var englishNameMap map[string][]Country
@@ -144,6 +144,6 @@ func doSearch(ci countryIndex, q string) (res CountryResult) {
 			i++
 		}
 	}
-	res.countries = tmp[0:i]
+	res.Countries = tmp[0:i]
 	return res
 }
