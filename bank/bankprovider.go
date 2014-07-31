@@ -11,12 +11,12 @@ package bank
 
 import (
 	"bufio"
-	"errors"
 	"io"
-	"log"
 	"net/http"
 	"sort"
 	"strings"
+	
+	"github.com/musicbeat/stddata"
 )
 
 // BankProvider implements the Provider interface.
@@ -76,8 +76,8 @@ func (p *BankProvider) Load() (n int, err error) {
 
 	res, err := http.Get("http://www.fededirectory.frb.org/fpddir.txt")
 	if err != nil {
-		log.Fatal(err)
-		return 0, err
+		msg := "Failed to retrieve http://www.fededirectory.frb.org/fpddir.txt. " + err.Error()
+		return 0, &stddata.ServiceError{msg, http.StatusServiceUnavailable}
 	}
 	defer res.Body.Close()
 
@@ -89,8 +89,7 @@ func (p *BankProvider) Load() (n int, err error) {
 			break
 		}
 		if err != nil {
-			log.Fatal(err)
-			return 0, err
+			return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 		}
 		sline := strings.TrimRight(string(line), "\n")
 		// fmt.Printf("%s\n", sline)
@@ -148,12 +147,13 @@ func (p *BankProvider) storeData(s string, m map[string][]Bank) {
 func (p *BankProvider) Search(index string, q string) (result interface{}, err error) {
 	// make sure the data is loaded
 	if p.loaded != true {
-		return nil, errors.New("this should be a 503 Service Unavailable by the time it gets to the client")
+		return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 	}
 	bi, found := p.bankIndexes[index]
 	if !found {
 		// search cannot be performed
-		return nil, errors.New("this should be a 400 Bad Request by the time it gets to the client")
+		msg := "No index on " + index
+		return nil, &stddata.ServiceError{msg, http.StatusBadRequest}
 	}
 	result = doSearch(bi, q)
 	return result, nil

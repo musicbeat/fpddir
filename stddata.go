@@ -80,23 +80,35 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	v := strings.Split(r.URL.RawQuery, "=")
 	index := v[0]
 	if len(index) < 1 {
-		// TODO: need to supply a 400 Bad Request response
+		http.Error(w, "Invalid query", http.StatusBadRequest)
 		return
 	}
 	query := v[1]
 	if len(query) < 1 {
-		// TODO: need to supply a 400 Bad Request response
+		http.Error(w, "Invalid query", http.StatusBadRequest)
 	}
 	res, err := s.Provider.Search(index, query)
 	if err != nil {
+		if serr, ok := err.(*ServiceError); ok {
+			http.Error(w, serr.Error(), serr.Code)
+		}
 		// TODO: need to supply HTTP status codes for 503, 400
 		log.Printf("Error %v\n", err)
 	}
 	// convert result to json
 	j, err := json.MarshalIndent(res, "", "  ")
 	if err != nil {
-		log.Fatal("bank.DumpServer: ", err)
+		http.Error(w, "Failed to marshal result.", http.StatusInternalServerError)
 		return
 	}
 	io.WriteString(w, fmt.Sprintf("%s\n",j))
+}
+
+type ServiceError struct {
+	Msg	string	// description of error
+	Code	int	// http status constant
+}
+
+func (e *ServiceError) Error() string {
+	return e.Msg
 }
