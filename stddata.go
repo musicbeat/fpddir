@@ -50,17 +50,17 @@ type Provider interface {
 	Load() (n int, err error)
 	// Search takes the name of the index to be searched, and the value
 	// to match in that index. It returns an interface and an error.
-	// The value that is returned as v is intended to be marshaled as 
-	// json -- it is expected to be the collection of entities that 
+	// The value that is returned as v is intended to be marshaled as
+	// json -- it is expected to be the collection of entities that
 	// match the search.
 	Search(index string, q string) (v interface{}, err error)
 }
 
 // Service is used to handle http access to the stddata providers' data.
 type Service struct {
-	Provider	Provider
-	Count		int
-	EntityName		string
+	Provider   Provider
+	Count      int
+	EntityName string
 }
 
 func (s *Service) LoadProvider(p Provider, e string) (err error) {
@@ -107,12 +107,12 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
-	io.WriteString(w, fmt.Sprintf("%s\n",j))
+	io.WriteString(w, fmt.Sprintf("%s\n", j))
 }
 
 type ServiceError struct {
-	Msg	string	// description of error
-	Code	int	// http status constant
+	Msg  string // description of error
+	Code int    // http status constant
 }
 
 func (e *ServiceError) Error() string {

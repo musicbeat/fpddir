@@ -156,9 +156,11 @@ func doSearch(li languageIndex, q string) (res LanguageResult) {
 	// order of the sorted keys, so the results are sorted.
 	i := 0
 	for k := range li.languageKeys {
-		if strings.EqualFold(q, li.languageKeys[k][0:len(q)]) {
-			tmp[i] = li.languageMap[li.languageKeys[k]]
-			i++
+		if len(li.languageKeys[k]) >= len(q) {
+			if strings.EqualFold(q, li.languageKeys[k][0:len(q)]) {
+				tmp[i] = li.languageMap[li.languageKeys[k]]
+				i++
+			}
 		}
 	}
 	res.Languages = tmp[0:i]

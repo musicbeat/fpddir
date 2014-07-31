@@ -1,4 +1,5 @@
 package bank
+
 // Keep reading: http://golang.org/doc/code.html#Testing
 import (
 	"fmt"
@@ -6,9 +7,11 @@ import (
 
 	. "github.com/musicbeat/stddata"
 )
+
 var p Provider
+
 // number of banks (at least for now)
-var expected = 8647
+var expected = 19817
 
 func TestBankProviderLoad(t *testing.T) {
 	fmt.Println("Test: bank.Load")

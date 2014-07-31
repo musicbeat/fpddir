@@ -141,9 +141,11 @@ func doSearch(ci countryIndex, q string) (res CountryResult) {
 	// order of the sorted keys, so the results are sorted.
 	i := 0
 	for k := range ci.countryKeys {
-		if strings.EqualFold(q, ci.countryKeys[k][0:len(q)]) {
-			tmp[i] = ci.countryMap[ci.countryKeys[k]]
-			i++
+		if len(ci.countryKeys[k]) >= len(q) {
+			if strings.EqualFold(q, ci.countryKeys[k][0:len(q)]) {
+				tmp[i] = ci.countryMap[ci.countryKeys[k]]
+				i++
+			}
 		}
 	}
 	res.Countries = tmp[0:i]
