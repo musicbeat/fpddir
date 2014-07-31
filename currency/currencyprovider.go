@@ -11,12 +11,12 @@ package currency
 
 import (
 	"encoding/xml"
-	"errors"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"sort"
 	"strings"
+	
+	"github.com/musicbeat/stddata"
 )
 
 // CurrencyProvider implements the Provider interface.
@@ -69,22 +69,20 @@ func (p *CurrencyProvider) Load() (n int, err error) {
 
 	res, err := http.Get("http://www.currency-iso.org/dam/downloads/table_a1.xml")
 	if err != nil {
-		log.Fatal(err)
-		return 0, err
+		msg := "Failed to retrieve http://www.currency-iso.org/dam/downloads/table_a1.xml " + err.Error()
+		return 0, &stddata.ServiceError{msg, http.StatusServiceUnavailable}
 	}
 	defer res.Body.Close()
 
 	currencyBody, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		log.Fatal(err)
-		return 0, err
+		return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 	}
 
 	var currencies Currencies
 	err = xml.Unmarshal([]byte(currencyBody), &currencies)
 	if err != nil {
-		log.Fatal(err)
-		return 0, err
+		return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 	}
 
 	// add the currency entities to the maps:
@@ -126,15 +124,16 @@ func (p *CurrencyProvider) storeData(s string, m map[string][]Currency) {
 // If the value in index does not match the name of a map, an error is returned.
 // The keys in the map specified by index are searched using a regex-like 'q.*', and
 // any matching Currency entities are returned in the result.
-func (p *CurrencyProvider) Search(s string, q string) (result interface{}, err error) {
+func (p *CurrencyProvider) Search(index string, q string) (result interface{}, err error) {
 	// make sure the data is loaded
 	if p.loaded != true {
-		return nil, errors.New("this should be a 503 Service Unavailable by the time it gets to the client")
+		return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 	}
-	ci, found := p.currencyIndexes[s]
+	ci, found := p.currencyIndexes[index]
 	if !found {
 		// search cannot be performed
-		return nil, errors.New("this should be a 400 Bad Request by the time it gets to the client")
+		msg := "No index on " + index
+		return nil, &stddata.ServiceError{msg, http.StatusBadRequest}
 	}
 	result = doSearch(ci, q)
 	return result, nil

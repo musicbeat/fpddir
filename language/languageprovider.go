@@ -23,12 +23,12 @@ package language
 
 import (
 	"encoding/csv"
-	"errors"
 	"io"
-	"log"
 	"net/http"
 	"sort"
 	"strings"
+	
+	"github.com/musicbeat/stddata"
 )
 
 // LanguageProvider implements the Provider interfaces.
@@ -71,8 +71,7 @@ func (p *LanguageProvider) Load() (n int, err error) {
 
 	res, err := http.Get("http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt")
 	if err != nil {
-		log.Fatal(err)
-		return 0, err
+		return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 	}
 
 	reader := csv.NewReader(res.Body)
@@ -89,8 +88,7 @@ func (p *LanguageProvider) Load() (n int, err error) {
 		if err == io.EOF {
 			break
 		} else if err != nil {
-			log.Fatal(err)
-			return 0, err
+			return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 		}
 
 		var l Language
@@ -135,15 +133,16 @@ func (p *LanguageProvider) storeData(s string, m map[string][]Language) {
 // If the value in index does not match the name of a map, an error is returned.
 // The keys in the map specified by index are searched using a regex-like 'q.*', and
 // any matching Languages are returned in the result.
-func (p *LanguageProvider) Search(s string, q string) (result interface{}, err error) {
+func (p *LanguageProvider) Search(index string, q string) (result interface{}, err error) {
 	// make sure the data is loaded
 	if p.loaded != true {
-		return nil, errors.New("this should be a 503 Service Unavailable by the time it gets to the client")
+		return nil, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
 	}
-	li, found := p.languageIndexes[s]
+	li, found := p.languageIndexes[index]
 	if !found {
 		// search cannot be performed
-		return nil, errors.New("this should be a 400 Bad Request by the time it gets to the client")
+		msg := "No index on " + index
+		return nil, &stddata.ServiceError{msg, http.StatusBadRequest}
 	}
 	result = doSearch(li, q)
 	return result, nil

@@ -79,26 +79,32 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// get the "index=query" parts of the request, for example, "name=Abc".
 	v := strings.Split(r.URL.RawQuery, "=")
 	index := v[0]
+	if len(v) < 2 {
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
 	if len(index) < 1 {
-		http.Error(w, "Invalid query", http.StatusBadRequest)
+		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
 	query := v[1]
 	if len(query) < 1 {
 		http.Error(w, "Invalid query", http.StatusBadRequest)
+		return
 	}
 	res, err := s.Provider.Search(index, query)
 	if err != nil {
 		if serr, ok := err.(*ServiceError); ok {
-			http.Error(w, serr.Error(), serr.Code)
+			w.WriteHeader(serr.Code)
+			return
 		}
-		// TODO: need to supply HTTP status codes for 503, 400
 		log.Printf("Error %v\n", err)
+		return
 	}
 	// convert result to json
 	j, err := json.MarshalIndent(res, "", "  ")
 	if err != nil {
-		http.Error(w, "Failed to marshal result.", http.StatusInternalServerError)
+		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
 	io.WriteString(w, fmt.Sprintf("%s\n",j))
