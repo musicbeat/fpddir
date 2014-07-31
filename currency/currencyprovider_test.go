@@ -1,4 +1,5 @@
 package currency
+
 // Keep reading: http://golang.org/doc/code.html#Testing
 import (
 	"fmt"
@@ -6,6 +7,7 @@ import (
 
 	. "github.com/musicbeat/stddata"
 )
+
 var p Provider
 var expected int = 180
 

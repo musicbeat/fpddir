@@ -63,18 +63,27 @@ type Service struct {
 	EntityName string
 }
 
+// LoadProvider is used to prepare the data.
+//
+// Implementations retrieve their source data, and index it for
+// searching.
 func (s *Service) LoadProvider(p Provider, e string) (err error) {
 	s.Provider = p
 	s.EntityName = e
 	n, err := s.Provider.Load()
 	if err != nil {
 		log.Printf("Provider for %s failed to load. %s\n", e, err)
-		return errors.New("let the user get a 503 Service Unavailable for this provider")
+		return errors.New("Searches will get 503 Service Unavailable for this provider")
 	}
 	s.Count = n
 	return nil
 }
 
+// ServeHTTP is the Service's implementation for searching.
+//
+// After some basic validation of the search request, the
+// Provider's Search() implementation is called. The response
+// from Search() is marshalled into json.
 func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// get the "index=query" parts of the request, for example, "name=Abc".
 	v := strings.Split(r.URL.RawQuery, "=")
@@ -110,11 +119,14 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, fmt.Sprintf("%s\n", j))
 }
 
+// ServiceError combines an http status code and an
+// application error message.
 type ServiceError struct {
 	Msg  string // description of error
 	Code int    // http status constant
 }
 
+// Error implements the built-in error interface on ServiceError.
 func (e *ServiceError) Error() string {
 	return e.Msg
 }

@@ -1,4 +1,5 @@
 package country
+
 // Keep reading: http://golang.org/doc/code.html#Testing
 import (
 	"fmt"
@@ -6,6 +7,7 @@ import (
 
 	. "github.com/musicbeat/stddata"
 )
+
 var p Provider
 
 func TestCountryProvider(t *testing.T) {
@@ -50,4 +52,3 @@ func TestNumberSearch(t *testing.T) {
 		t.Fatalf("Err %v\n", err)
 	}
 }
-

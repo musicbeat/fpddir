@@ -15,34 +15,34 @@ import (
 	"net/http"
 	"sort"
 	"strings"
-	
+
 	"github.com/musicbeat/stddata"
 )
 
 // CurrencyProvider implements the Provider interface.
 type CurrencyProvider struct {
-	loaded bool
-	size int
+	loaded          bool
+	size            int
 	currencyIndexes map[string]currencyIndex
 }
 
 type currencyIndex struct {
-	currencyMap map[string][]Currency
+	currencyMap  map[string][]Currency
 	currencyKeys []string
 }
 
 // Currency is the information on one currency in the source data.
 type Currency struct {
 	// XMLName		xml.Name	`xml:"CcyNtry"`
-	CountryName		string	`xml:"CtryNm"`
-	CurrencyName	string	`xml:"CcyNm"`
-	CurrencyCode	string	`xml:"Ccy"`
-	CurrencyNumber	string	`xml:"CcyNbr"`
-	MinorUnits	string	`xml:"CcyMnrUnts"`
+	CountryName    string `xml:"CtryNm"`
+	CurrencyName   string `xml:"CcyNm"`
+	CurrencyCode   string `xml:"Ccy"`
+	CurrencyNumber string `xml:"CcyNbr"`
+	MinorUnits     string `xml:"CcyMnrUnts"`
 }
 type Currencies struct {
 	// XMLName		xml.Name	`xml:"ISO_4217"`
-	Currencies	[]Currency	`xml:"CcyTbl>CcyNtry"`
+	Currencies []Currency `xml:"CcyTbl>CcyNtry"`
 }
 
 // CurrencyResult is the interface{} that is returned from Search
@@ -139,7 +139,7 @@ func (p *CurrencyProvider) Search(index string, q string) (result interface{}, e
 	return result, nil
 }
 func doSearch(ci currencyIndex, q string) (res CurrencyResult) {
-	// prepare the response. allocate enough space for the response to be the 
+	// prepare the response. allocate enough space for the response to be the
 	// entire data set.
 	tmp := make([][]Currency, len(ci.currencyKeys))
 	// brute force the sorted list of keys, looking for a match to 'q.*'.

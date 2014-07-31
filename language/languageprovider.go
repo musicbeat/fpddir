@@ -27,7 +27,7 @@ import (
 	"net/http"
 	"sort"
 	"strings"
-	
+
 	"github.com/musicbeat/stddata"
 )
 
@@ -148,7 +148,7 @@ func (p *LanguageProvider) Search(index string, q string) (result interface{}, e
 	return result, nil
 }
 func doSearch(li languageIndex, q string) (res LanguageResult) {
-	// prepare the response. allocate enough space for the response to be the 
+	// prepare the response. allocate enough space for the response to be the
 	// entire data set.
 	tmp := make([][]Language, len(li.languageKeys))
 	// brute force the sorted list of keys, looking for a match to 'q.*'.

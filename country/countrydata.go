@@ -1,6 +1,7 @@
 package country
 
 import "strings"
+
 /*
 countrydata is derived from the ISO 3166-1 information
 presented on wikipedia:
@@ -258,4 +259,3 @@ Western Sahara	EH	ESH	732
 Yemen	YE	YEM	887
 Zambia	ZM	ZMB	894
 Zimbabwe	ZW	ZWE	716`)
-

@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 /*
-Package country implenments the methods of a stddata.Provider.
+Package country implements the methods of a stddata.Provider.
 It provides searches against the data set of ISO 3166-2
 country codes. Source data is declared in countrydata.go
 */
@@ -12,31 +12,32 @@ package country
 import (
 	"encoding/csv"
 	"errors"
-	"net/http"
 	"io"
+	"net/http"
 	"sort"
 	"strings"
-	
+
 	"github.com/musicbeat/stddata"
 )
 
 // CountryProvider implements the Provider interface.
 type CountryProvider struct {
-	loaded bool
-	size int
+	loaded         bool
+	size           int
 	countryIndexes map[string]countryIndex
 }
 
 type countryIndex struct {
-	countryMap map[string][]Country
+	countryMap  map[string][]Country
 	countryKeys []string
 }
 
+// Country models one entity.
 type Country struct {
-	EnglishName	string
-	Alpha2Code	string
-	Alpha3Code				string
-	NumericCode			string
+	EnglishName string
+	Alpha2Code  string
+	Alpha3Code  string
+	NumericCode string
 }
 
 // CountryResult is the interface{} that is returned from Search
@@ -133,7 +134,7 @@ func (p *CountryProvider) Search(index string, q string) (result interface{}, er
 	return result, nil
 }
 func doSearch(ci countryIndex, q string) (res CountryResult) {
-	// prepare the response. allocate enough space for the response to be the 
+	// prepare the response. allocate enough space for the response to be the
 	// entire data set.
 	tmp := make([][]Country, len(ci.countryKeys))
 	// brute force the sorted list of keys, looking for a match to 'q.*'.

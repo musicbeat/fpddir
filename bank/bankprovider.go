@@ -32,17 +32,6 @@ type bankIndex struct {
 }
 
 // Bank is the information on one bank in the source data.
-type Xank struct {
-	RoutingNumber                     string // Length 9; Columns 1-9
-	TelegraphicName                   string // Length 18; Columns 10-27
-	CustomerName                      string // Length 36; Columns 28-63
-	StateAbbreviation                 string // Length 2; Columns 64-65
-	City                              string // Length 25; Columns 66-90
-	FundsTransferStatus               string // Length 1; Column 91
-	FundsSettlementOnlyStatus         string // Length 1; Column 92
-	BookEntrySecuritiesTransferStatus string // Length 1; Column 93
-	DateOfLastRevision                string // Length 8; Columns 94-101
-}
 type Bank struct {
 	Routing               string // Length 9; Columns 1-9
 	OfficeCode            string // Length 1; Columns 10
