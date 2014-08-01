@@ -131,9 +131,11 @@ func (p *LanguageProvider) storeData(s string, m map[string][]Language) {
 // contains an array of the results to the search. The value
 // in index is used to choose the map of Language entities that will be searched.
 // If the value in index does not match the name of a map, an error is returned.
-// The keys in the map specified by index are searched using a regex-like 'q.*', and
+// The keys in the map specified by index are searched using a regex-like 'query.*', and
 // any matching Languages are returned in the result.
-func (p *LanguageProvider) Search(index string, q string) (result interface{}, err error) {
+// Search can also "dump" an index. When the value of query is "_dump", the index specified
+// is used to supply the entire data set, in the order of the index.
+func (p *LanguageProvider) Search(index string, query string) (result interface{}, err error) {
 	// make sure the data is loaded
 	if p.loaded != true {
 		return nil, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
@@ -144,20 +146,26 @@ func (p *LanguageProvider) Search(index string, q string) (result interface{}, e
 		msg := "No index on " + index
 		return nil, &stddata.ServiceError{msg, http.StatusBadRequest}
 	}
-	result = doSearch(li, q)
+	result = doSearch(li, query)
 	return result, nil
 }
-func doSearch(li languageIndex, q string) (res LanguageResult) {
+func doSearch(li languageIndex, query string) (res LanguageResult) {
+	// the "reserved" query term "_dump" is handled by returning all the
+	// results in the order of the index.
+	dump := query == "_dump"
 	// prepare the response. allocate enough space for the response to be the
 	// entire data set.
 	tmp := make([][]Language, len(li.languageKeys))
-	// brute force the sorted list of keys, looking for a match to 'q.*'.
+	// brute force the sorted list of keys, looking for a match to 'query.*'.
 	// add each match to the result array. The results are added in the
 	// order of the sorted keys, so the results are sorted.
 	i := 0
 	for k := range li.languageKeys {
-		if len(li.languageKeys[k]) >= len(q) {
-			if strings.EqualFold(q, li.languageKeys[k][0:len(q)]) {
+		if dump {
+			tmp[i] = li.languageMap[li.languageKeys[k]]
+			i++
+		} else if len(li.languageKeys[k]) >= len(query) {
+			if strings.EqualFold(query, li.languageKeys[k][0:len(query)]) {
 				tmp[i] = li.languageMap[li.languageKeys[k]]
 				i++
 			}

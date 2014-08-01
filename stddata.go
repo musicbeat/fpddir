@@ -85,7 +85,9 @@ func (s *Service) LoadProvider(p Provider, e string) (err error) {
 // Provider's Search() implementation is called. The response
 // from Search() is marshalled into json.
 func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	// get the "index=query" parts of the request, for example, "name=Abc".
+
+	// Get the "index=query" parts of the request, for example, "name=Abc".
+	// Or for a dump of an index, "name=_dump"
 	v := strings.Split(r.URL.RawQuery, "=")
 	index := v[0]
 	if len(v) < 2 {

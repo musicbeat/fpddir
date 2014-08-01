@@ -64,7 +64,7 @@ var sf = [...]int{10, 19}
 var rt = [...]int{19, 20}
 var cd = [...]int{20, 26}
 var nr = [...]int{26, 35}
-var cn = [...]int{36, 71}
+var cn = [...]int{35, 71}
 var ad = [...]int{71, 107}
 var ci = [...]int{107, 127}
 var sc = [...]int{127, 129}
@@ -160,9 +160,11 @@ func (p *BankProvider) storeData(s string, m map[string][]Bank) {
 // contains an array of the results to the search. The value
 // in index is used to choose the map of Bank entities that will be searched.
 // If the value in index does not match the name of a map, an error is returned.
-// The keys in the map specified by index are searched using a regex-like 'q.*', and
+// The keys in the map specified by index are searched using a regex-like 'query.*', and
 // any matching Banks are returned in the result.
-func (p *BankProvider) Search(index string, q string) (result interface{}, err error) {
+// Search can also "dump" an index. When the value of query is "_dump", the index specified
+// is used to supply the entire data set, in the order of the index.
+func (p *BankProvider) Search(index string, query string) (result interface{}, err error) {
 	// make sure the data is loaded
 	if p.loaded != true {
 		return 0, &stddata.ServiceError{err.Error(), http.StatusServiceUnavailable}
@@ -173,20 +175,26 @@ func (p *BankProvider) Search(index string, q string) (result interface{}, err e
 		msg := "No index on " + index
 		return nil, &stddata.ServiceError{msg, http.StatusBadRequest}
 	}
-	result = doSearch(bi, q)
+	result = doSearch(bi, query)
 	return result, nil
 }
-func doSearch(bi bankIndex, q string) (res BankResult) {
+func doSearch(bi bankIndex, query string) (res BankResult) {
+	// the "reserved" query term "_dump" is handled by returning all the
+	// results in the order of the index.
+	dump := query == "_dump"
 	// prepare the response. allocate enough space for the response to be the
 	// entire data set.
 	tmp := make([][]Bank, len(bi.bankKeys))
-	// brute force the sorted list of keys, looking for a match to 'q.*'.
+	// brute force the sorted list of keys, looking for a match to 'query.*'.
 	// add each match to the result array. The results are added in the
 	// order of the sorted keys, so the results are sorted.
 	i := 0
 	for k := range bi.bankKeys {
-		if len(bi.bankKeys[k]) >= len(q) {
-			if strings.EqualFold(q, bi.bankKeys[k][0:len(q)]) {
+		if dump {
+			tmp[i] = bi.bankMap[bi.bankKeys[k]]
+			i++
+		} else if len(bi.bankKeys[k]) >= len(query) {
+			if strings.EqualFold(query, bi.bankKeys[k][0:len(query)]) {
 				tmp[i] = bi.bankMap[bi.bankKeys[k]]
 				i++
 			}
