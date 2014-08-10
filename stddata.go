@@ -40,9 +40,8 @@ import (
 	"strings"
 )
 
-// Provider is the interface that wraps all the interfaces
-// together. A type that implements Provider's methods
-// can be managed as a Standard Data Provider.
+// Provider is the interface for a Standard Data Provider. A type that 
+// implements Provider's methods can be managed as a Standard Data Provider.
 type Provider interface {
 	// Load loads the data, according to the needs of the particular
 	// implementation's standard data set. It returns the number of
