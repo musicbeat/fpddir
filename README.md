@@ -1,6 +1,6 @@
 # [stddata](https://github.com/musicbeat/stddata)
 
-The [stddata](https://github.com/musicbeat/stddata) is a set of components that serve searches of "standard" data sets via http, supplying json responses. The data sets are the Federal Reserve's ACH list, and ISO country, currency, and lanugage codes.
+The [stddata](https://github.com/musicbeat/stddata) is a set of components implemented with [golang](https://golang.org) that serve searches of "standard" data sets via http, supplying json responses. The data sets are the Federal Reserve's ACH list, and ISO country, currency, and lanugage codes.
 
 Everything here is a proof-of-concept. Nothing is ready for production use. And the code could benefit from considerably more refactoring to eliminate redundancy, improve error handling, and generally become more idiomatic [go](https://golang.org) code.
 
