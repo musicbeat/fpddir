@@ -85,23 +85,14 @@ func (s *Service) LoadProvider(p Provider, e string) (err error) {
 // from Search() is marshalled into json.
 func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
-	// Get the "index=query" parts of the request, for example, "name=Abc".
-	// Or for a dump of an index, "name=_dump"
-	v := strings.Split(r.URL.RawQuery, "=")
-	index := v[0]
-	if len(v) < 2 {
-		w.WriteHeader(http.StatusBadRequest)
+	// get the index and query values
+	var index, query string
+	var err error
+	if index, query, err = getQuery(r.URL.RawQuery); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if len(index) < 1 {
-		w.WriteHeader(http.StatusBadRequest)
-		return
-	}
-	query := v[1]
-	if len(query) < 1 {
-		http.Error(w, "Invalid query", http.StatusBadRequest)
-		return
-	}
+
 	res, err := s.Provider.Search(index, query)
 	if err != nil {
 		if serr, ok := err.(*ServiceError); ok {
@@ -120,6 +111,26 @@ func (s *Service) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, fmt.Sprintf("%s\n", j))
 }
 
+// Get the "index=query" parts of the request, for example, "name=Abc".
+// Or for a dump of an index, "name=_dump". Or error.
+func getQuery(u string) (query string, index string, err error) {
+	v := strings.Split(u, "=")
+	if len(v) < 2 {
+		err := errors.New("Malformed request")
+		return index, query, err
+	}
+	index = v[0]
+	if len(index) < 1 {
+		err := errors.New("Malformed request")
+		return index, query, err
+	}
+	query = v[1]
+	if len(query) < 1 {
+		err := errors.New("Malformed request")
+		return index, query, err
+	}
+	return index, query, err
+}
 // ServiceError combines an http status code and an
 // application error message.
 type ServiceError struct {
